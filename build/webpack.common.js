@@ -48,7 +48,7 @@ module.exports = {
   entry: './app.tsx',
   output: {
     publicPath: '/',
-    path: path.resolve('./dist'),
+    path: path.resolve('./docs'),
     filename: 'js/app.[hash:8].js'
   },
   module: {
