@@ -1,0 +1,47 @@
+{
+  "name": "mini-console",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:liurongqing/game-platform.git",
+  "author": "liurongqing <phpgege@163.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "export NODE_ENV=development && yarn dll && webpack-dev-server --open --config build/webpack.dev.js",
+    "prod": "yarn dll && webpack --config build/webpack.prod.js",
+    "dll": "node build/webpack.dll.js",
+    "docs": "node build/tsdoc/index.js"
+  },
+  "dependencies": {
+    "antd": "^3.24.2",
+    "crypto-js": "^3.1.9-1",
+    "moment": "^2.24.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@microsoft/tsdoc": "^0.12.12",
+    "@types/crypto-js": "^3.1.43",
+    "@types/node": "^11.12.0",
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
+    "@types/react-router-dom": "^5.1.0",
+    "@types/webpack-env": "^1.13.9",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^2.0.1",
+    "colors": "^1.3.3",
+    "copy-webpack-plugin": "^5.0.2",
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "1.3.0",
+    "webpack": "^4.29.6",
+    "webpack-bundle-analyzer": "^3.1.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1"
+  }
+}
