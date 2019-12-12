@@ -5,6 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const env = process.env.NODE_ENV || 'production'
+const isProduction = env === 'production'
 
 let data = require('./dll/data')
 data = data.map(v => v.name)
@@ -47,7 +48,7 @@ module.exports = {
   context: path.resolve('./src'),
   entry: './app.tsx',
   output: {
-    publicPath: env === 'production' ? '/phaser3' : '/',
+    publicPath: isProduction ? '/phaser3' : '/',
     path: path.resolve('./docs'),
     filename: 'js/app.[hash:8].js'
   },
@@ -61,7 +62,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    isProduction && new CleanWebpackPlugin(),
     ...manifests,
     new CopyPlugin([
       {
@@ -81,7 +82,7 @@ module.exports = {
       filename: 'index.html',
       template: './index.html',
       venders: arrAssets,
-      _root: env === 'production' ? '/phaser3' : '/'
+      _root: isProduction ? '/phaser3/' : '/'
     })
   ],
   resolve: {
