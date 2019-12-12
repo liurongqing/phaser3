@@ -47,7 +47,7 @@ module.exports = {
   context: path.resolve('./src'),
   entry: './app.tsx',
   output: {
-    publicPath: '/',
+    publicPath: env === 'production' ? '/phaser3' : '/',
     path: path.resolve('./docs'),
     filename: 'js/app.[hash:8].js'
   },
@@ -80,7 +80,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './index.html',
-      venders: arrAssets
+      venders: arrAssets,
+      _root: env === 'production' ? '/phaser3' : '/'
     })
   ],
   resolve: {
