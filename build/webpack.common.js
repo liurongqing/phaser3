@@ -73,7 +73,7 @@ module.exports = {
     ]),
     new CopyPlugin([
       {
-        from: `./public/**`,
+        from: '../public/**',
         to: './',
         flatten: true
       }
