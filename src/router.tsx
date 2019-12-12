@@ -71,7 +71,7 @@ const routes = [
 
 export default () => {
   return (
-    <Router>
+    <Router basename="/phaser3">
       <CRouter routes={routes} />
     </Router>
   )
