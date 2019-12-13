@@ -2,6 +2,7 @@
 import * as React from 'react'
 import { Store } from '@/commons/Store'
 import { debounce } from '@/utils'
+import { blockLevelAnchors } from '@/utils'
 const { useState, useEffect, useContext } = React
 
 let data = []
@@ -9,7 +10,7 @@ const debounceSetData = debounce((dispatch: any) => {
   dispatch({
     type: 'SET_ANCHORS',
     data: {
-      anchors: data
+      anchors: blockLevelAnchors(data)
     }
   })
   data = []
@@ -20,6 +21,7 @@ export default ({ level, children }) => {
 
   useEffect(() => {
     let singleData = {
+      level,
       href: `#${children[0].props.value}`,
       title: children[0].props.value
     }
@@ -27,7 +29,7 @@ export default ({ level, children }) => {
     debounceSetData(dispatch)
   }, [])
 
-  console.log(data)
+  // console.log(data)
   return React.createElement(
     `h${level}`,
     {

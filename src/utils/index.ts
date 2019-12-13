@@ -9,6 +9,7 @@ export { debounce } from './debounce'
 export { getFilterFields } from './getFilterFields'
 export { isJsonString } from './isJsonString'
 export { storage } from './storage'
+export { blockLevelAnchors } from './blockLevelAnchors'
 export {
   md5,
   sha1,

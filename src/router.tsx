@@ -5,8 +5,12 @@ import CRouter from '@/commons/component/CRouter'
 // 组件路由
 import Layout from './layouts/BasicLayout'
 import Home from './modules/Home'
-import Actions from './modules/Actions/Actions'
-import Animation from './modules/Animation/Animation'
+import Actions from './modules/Actions'
+import Animation from './modules/Animation'
+import Audio from './modules/Audio'
+import Cache from './modules/Cache'
+import Camera from './modules/Camera'
+import Components from './modules/Components'
 
 /**
  * 以下为单页路由
@@ -27,28 +31,42 @@ export const routesData = [
     parentId: 0,
     text: 'Actions',
     path: '/actions',
-    hidden: true
+    component: Actions
   },
   {
     id: 3,
-    parentId: 2,
-    text: 'Actions Actions',
-    path: '/actions/actions',
-    component: Actions
+    parentId: 0,
+    text: 'Animation',
+    path: '/animation',
+    component: Animation
   },
   {
     id: 4,
     parentId: 0,
-    text: 'Animation',
-    path: '/animation',
-    hidden: true
+    text: 'Audio',
+    path: '/audio',
+    component: Audio
   },
   {
     id: 5,
-    parentId: 4,
-    text: 'Animation',
-    path: '/animation/animation',
-    component: Animation
+    parentId: 0,
+    text: 'Cache',
+    path: '/cache',
+    component: Cache
+  },
+  {
+    id: 6,
+    parentId: 0,
+    text: 'Camera',
+    path: '/camera',
+    component: Camera
+  },
+  {
+    id: 7,
+    parentId: 0,
+    text: 'Components',
+    path: '/components',
+    component: Components
   }
 ]
 
@@ -68,7 +86,7 @@ const routes = [
     exact: false,
     component: Layout,
     routes: [
-      ...routesData.filter(v => !v.hidden),
+      ...routesData.filter((v: any) => !v.hidden),
       {
         redirect: true,
         from: '*',
