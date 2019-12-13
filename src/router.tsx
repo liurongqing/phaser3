@@ -2,6 +2,12 @@ import * as React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import CRouter from '@/commons/component/CRouter'
 
+/**
+ * 以下为单页路由
+ */
+import pageMap from './pages/Map'
+import NotFound from './pages/404'
+
 // 组件路由
 import Layout from './layouts/BasicLayout'
 import Home from './modules/Home'
@@ -11,12 +17,6 @@ import Audio from './modules/Audio'
 import Cache from './modules/Cache'
 import Camera from './modules/Camera'
 import Components from './modules/Components'
-
-/**
- * 以下为单页路由
- */
-import pageMap from './pages/Map'
-import NotFound from './pages/404'
 
 export const routesData = [
   {
