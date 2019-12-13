@@ -12,7 +12,9 @@ export default ({ routes, location, history }) => {
   const [collapsed, setCollapsed] = useState(false)
   return (
     <Layout>
-      {/* <Header>123123</Header> */}
+      <Header>
+        <div className="phaser3-logo">Phaser3 笔记</div>
+      </Header>
       <Layout>
         <Sider
           trigger={null}
@@ -25,7 +27,7 @@ export default ({ routes, location, history }) => {
         >
           <MenuContext />
         </Sider>
-        <Content className="phaser3-content">
+        <Content className="phaser3-content markdown-body">
           <CRouter routes={routes} />
         </Content>
         <Sider collapsed={collapsed}>

@@ -3,6 +3,8 @@ import * as ReactDOM from 'react-dom'
 
 import 'antd/dist/antd.css'
 import './app.css'
+import './github-markdown.css'
+import 'highlight.js/styles/github.css'
 
 import { ConfigProvider } from 'antd'
 import zhCN from 'antd/lib/locale-provider/zh_CN'

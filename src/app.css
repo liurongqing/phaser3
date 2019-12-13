@@ -2,6 +2,12 @@ body {
   overflow: hidden;
 }
 
+.ant-layout-header {
+  height: 48px;
+  line-height: 48px;
+  background: #108ee9;
+}
+
 .ant-layout {
   background: #ffffff;
 }
@@ -10,8 +16,14 @@ body {
   width: 1px;
 }
 
+.phaser3-logo {
+  color: #ffffff;
+  font-size: 18px;
+}
+
 .phaser3-content {
   padding: 30px;
   overflow: auto;
-  height: calc(100vh - 64px);
+  height: calc(100vh - 48px);
+  height: 100vh;
 }

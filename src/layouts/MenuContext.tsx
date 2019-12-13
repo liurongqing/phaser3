@@ -93,7 +93,6 @@ const MenuContext = ({ location }) => {
           key={v.link}
           title={
             <span>
-              {v.icon && <Icon type={v.icon} />}
               <span>{v.text}</span>
             </span>
           }
@@ -103,7 +102,6 @@ const MenuContext = ({ location }) => {
       ) : (
         <Menu.Item key={v.link}>
           <Link to={v.link}>
-            {v.icon && <Icon type={v.icon} />}
             <span>{v.text}</span>
           </Link>
         </Menu.Item>
@@ -117,7 +115,7 @@ const MenuContext = ({ location }) => {
       mode="inline"
       defaultSelectedKeys={[currentKeys.join('')]}
       defaultOpenKeys={currentKeys}
-      style={{ height: 'calc(100vh - 64px)' }}
+      style={{ height: 'calc(100vh - 48px)' }}
     >
       {CMenu}
     </Menu>
