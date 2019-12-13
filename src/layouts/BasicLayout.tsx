@@ -1,16 +1,12 @@
 import * as React from 'react'
-import { Layout, Anchor } from 'antd'
+import { Layout } from 'antd'
 
 import CRouter from '@/commons/component/CRouter'
-import { params } from '@/utils'
-
 import MenuContext from './MenuContext'
-import Header1 from './Header'
-import Footer from './Footer'
+import AnchorLayout from './AnchorLayout'
 
-const { useEffect, useState } = React
+const { useState } = React
 const { Content, Header, Sider } = Layout
-const { Link } = Anchor
 
 export default ({ routes, location, history }) => {
   const [collapsed, setCollapsed] = useState(false)
@@ -21,7 +17,6 @@ export default ({ routes, location, history }) => {
         <Sider
           trigger={null}
           breakpoint="lg"
-          collapsible
           width="256"
           collapsed={collapsed}
           onCollapse={collapsed => {
@@ -30,23 +25,11 @@ export default ({ routes, location, history }) => {
         >
           <MenuContext />
         </Sider>
-        <Content>
+        <Content className="phaser3-content">
           <CRouter routes={routes} />
         </Content>
-        <Sider>
-          <Anchor style={{ height: 'calc(100vh - 64px)' }}>
-            <Link href="#components-anchor-demo-basic" title="Basic demo" />
-            <Link href="#components-anchor-demo-static" title="Static demo" />
-            <Link
-              href="#components-anchor-demo-basic"
-              title="Basic dBasicBasicBasicemo with Target"
-              target="_blank"
-            />
-            <Link href="#API" title="API">
-              <Link href="#Anchor-Props" title="Anchor Props" />
-              <Link href="#Link-Props" title="Link Props" />
-            </Link>
-          </Anchor>
+        <Sider collapsed={collapsed}>
+          <AnchorLayout />
         </Sider>
       </Layout>
 

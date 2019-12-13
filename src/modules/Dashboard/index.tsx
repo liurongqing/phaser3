@@ -1,18 +1,30 @@
 import * as React from 'react'
 import { Icon, Row, Col, Card, Statistic } from 'antd'
-// import useSyncState from 'use-sync-state'
+import * as ReactMarkdown from 'react-markdown'
+import homeMd from '@/markdown/home.md'
 
 const { useState } = React
 export default () => {
-  // const [s, ss] = useState(11)
-  // console.log(s)
-  // ss(22)
-  // console.log(s)
+  const HeadingBlock = ({ level, children }) => {
+    console.log('level', level)
+    return React.createElement(
+      `h${level}`,
+      {
+        id: children[0].props.value
+      },
+      children
+    )
+  }
 
-  // const [status, setStatus] = useSyncState(1)
-  // console.log(status.current) // 1
-  // setStatus(2)
-  // console.log(status.current) // 2
-
-  return <div style={{ background: '#ECECEC', padding: '30px' }}>控制面板</div>
+  return (
+    <>
+      <ReactMarkdown
+        source={homeMd}
+        escapeHtml={false}
+        renderers={{
+          heading: HeadingBlock
+        }}
+      />
+    </>
+  )
 }

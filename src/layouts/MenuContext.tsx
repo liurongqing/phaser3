@@ -12,7 +12,7 @@ const MenuContext = ({ location }) => {
   const [data, setData] = useState([])
 
   const currentKeys = location.pathname.match(/\/\w+/g)
-  console.log('currentkeys', currentKeys)
+  // console.log('currentkeys', currentKeys)
   useEffect(() => {
     setData([
       {

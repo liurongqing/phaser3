@@ -3,3 +3,5 @@ interface Window {
 }
 
 declare const WEBPACK_PRODUCTION: any
+
+declare module '*.md'

@@ -1,102 +1,17 @@
-/*
- * 通用
-*/
-.ant-btn + .ant-btn {
-  margin-left: 10px;
+body {
+  overflow: hidden;
 }
 
-.pagination {
-  margin-top: 20px;
+.ant-layout {
+  background: #ffffff;
 }
 
-/* MenuContext 文件中 */
-.logo {
-  display: flex;
-  align-items: center;
-  line-height: 64px;
-  background: #002140;
+.ant-anchor-ink::before {
+  width: 1px;
 }
 
-.logo img {
-  height: 32px;
-  padding-left: 24px;
-}
-
-.logo h1 {
-  font-size: 20px;
-  color: #fff;
-  margin-bottom: 0;
-  margin-left: 10px;
-}
-
-.menu-context-sider {
+.phaser3-content {
+  padding: 30px;
   overflow: auto;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-}
-
-/* Header 文件中 */
-.header-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-  padding-left: 24px;
-  padding-right: 16px;
-}
-
-.header-trigger {
-  font-size: 18px;
-  line-height: 64px;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.header-trigger:hover {
-  color: #1890ff;
-}
-
-/* RightContent 文件 */
-.right-content-box {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.right-content-badge {
-  font-size: 16px;
-  padding-top: 5px;
-  padding-right: 5px;
-}
-
-.right-content-item {
-  display: inline-block;
-  padding: 0 12px;
-  margin: 0 3px;
-  height: 100%;
-}
-
-.right-content-item:hover {
-  background: rgba(0, 0, 0, 0.025);
-}
-
-.right-content-item-name {
-  margin-left: 6px;
-}
-.right-content-menu-item {
-  display: flex;
-  align-items: center;
-}
-
-/* .basicLayout 文件 */
-.basic-layout-content {
-  margin: 24px 16px;
-  padding: 24px;
-  background: #fff;
-  min-height: 280px;
-}
-
-.action-box {
-  margin: 16px 0;
+  height: calc(100vh - 64px);
 }
