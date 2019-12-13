@@ -7,7 +7,7 @@ hljs.registerLanguage('javascript', javascript)
 
 import homeMd from '@/markdown/home.md'
 
-const { useState, useRef, useEffect } = React
+const { useRef, useEffect } = React
 
 export default () => {
   const HeadingBlock = ({ level, children }) => {

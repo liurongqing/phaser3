@@ -27,7 +27,7 @@ import { unique } from './unique'
  */
 export const tree = ({
   data = [],
-  parents = { value: '0', field: 'parentId' },
+  parents = { value: 0, field: 'parentId' },
   columns = null,
   fields = null
 } = {}) => {
@@ -36,7 +36,7 @@ export const tree = ({
     let tree = []
     for (let i = 0; i < data.length; i++) {
       if (data[i][parents.field] === pid) {
-        data[i].children = getTree(data, data[i]._id)
+        data[i].children = getTree(data, data[i].id)
         if (data[i].children.length == 0) {
           delete data[i].children
         }
