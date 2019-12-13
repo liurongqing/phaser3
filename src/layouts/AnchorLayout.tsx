@@ -1,8 +1,29 @@
 import * as React from 'react'
 import { Layout, Anchor } from 'antd'
+import { Store } from '@/commons/Store'
+
 const { Link } = Anchor
+const { useContext, useMemo } = React
 
 export default () => {
+  const { state }: any = useContext(Store)
+  const { anchors } = state
+  const CAnchor = useMemo(() => {
+    return layoutAnchor(anchors)
+  }, [anchors])
+
+  function layoutAnchor(data: any) {
+    return data.map((v: any) => {
+      return v.children ? (
+        <Link key={v.title} href={v.href} title={v.title}>
+          {layoutAnchor(v.children)}
+        </Link>
+      ) : (
+        <Link key={v.title} href={v.href} title={v.title} />
+      )
+    })
+  }
+
   return (
     <Anchor
       affix={false}
@@ -12,13 +33,7 @@ export default () => {
         window.document.querySelector('.phaser3-content') as HTMLElement
       }
     >
-      <Link href="#aaa" title="aaa" />
-      <Link href="#bbb" title="bbb" />
-      <Link href="#ccc" title="ccc" />
-      <Link href="#ddd" title="ddd">
-        <Link href="#eee" title="eee" />
-        <Link href="#fff" title="fff" />
-      </Link>
+      {CAnchor}
     </Anchor>
   )
 }

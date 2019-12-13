@@ -25,5 +25,4 @@ body {
   padding: 30px;
   overflow: auto;
   height: calc(100vh - 48px);
-  height: 100vh;
 }

@@ -7,13 +7,10 @@ import { routesData } from '@/router'
 const { SubMenu } = Menu
 const { useEffect, useState, useMemo } = React
 
-const menuData = []
-
 const MenuContext = ({ location }) => {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    console.log('routesData', routesData)
     setData(tree({ data: routesData }))
   }, [])
 

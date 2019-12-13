@@ -7,12 +7,15 @@ import './github-markdown.css'
 import 'highlight.js/styles/github.css'
 
 import { ConfigProvider } from 'antd'
+import { StoreProvider } from '@/commons/Store'
 import zhCN from 'antd/lib/locale-provider/zh_CN'
 import Router from './router'
 
 ReactDOM.render(
   <ConfigProvider locale={zhCN}>
-    <Router />
+    <StoreProvider>
+      <Router />
+    </StoreProvider>
   </ConfigProvider>,
   document.getElementById('app')
 )

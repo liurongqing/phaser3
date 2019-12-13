@@ -11,7 +11,7 @@
  * @category Utils
  */
 
-export const debounce = (fn: Function, wait = 50, immediate: boolean) => {
+export const debounce = (fn: Function, wait = 50, immediate?: boolean) => {
   let timer = null
   return (...args: any) => {
     timer && clearTimeout(timer)
