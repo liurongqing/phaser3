@@ -12,7 +12,7 @@ export default ({ routes, location, history }) => {
   const [collapsed, setCollapsed] = useState(false)
   return (
     <Layout>
-      <Header>123123</Header>
+      {/* <Header>123123</Header> */}
       <Layout>
         <Sider
           trigger={null}
