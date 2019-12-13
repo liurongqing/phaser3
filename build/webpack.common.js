@@ -44,7 +44,7 @@ arrManifest.map(function(v) {
   )
 })
 
-module.exports = {
+const config = {
   context: path.resolve('./src'),
   entry: './app.tsx',
   output: {
@@ -62,7 +62,6 @@ module.exports = {
     ]
   },
   plugins: [
-    isProduction && new CleanWebpackPlugin(),
     ...manifests,
     new CopyPlugin([
       {
@@ -83,6 +82,9 @@ module.exports = {
       template: './index.html',
       venders: arrAssets,
       _root: isProduction ? '/phaser3/' : '/'
+    }),
+    new webpack.DefinePlugin({
+      WEBPACK_PRODUCTION: JSON.stringify(isProduction)
     })
   ],
   resolve: {
@@ -92,3 +94,8 @@ module.exports = {
     }
   }
 }
+
+if (isProduction) {
+  config.plugins.unshift(new CleanWebpackPlugin())
+}
+module.exports = config

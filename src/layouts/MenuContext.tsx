@@ -8,11 +8,11 @@ import { tree } from '@/utils'
 const { SubMenu } = Menu
 const { useEffect, useState, useMemo } = React
 
-const MenuContext = (props: any) => {
-  const { location } = props
+const MenuContext = ({ location }) => {
   const [data, setData] = useState([])
-  const currentKeys = location.pathname.match(/\/\w+/g)
 
+  const currentKeys = location.pathname.match(/\/\w+/g)
+  console.log('currentkeys', currentKeys)
   useEffect(() => {
     setData([
       {

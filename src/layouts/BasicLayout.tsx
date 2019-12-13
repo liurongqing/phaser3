@@ -2,16 +2,17 @@ import * as React from 'react'
 import { Layout, Anchor } from 'antd'
 
 import CRouter from '@/commons/component/CRouter'
+import { params } from '@/utils'
 
 import MenuContext from './MenuContext'
 import Header1 from './Header'
 import Footer from './Footer'
 
-const { useState } = React
+const { useEffect, useState } = React
 const { Content, Header, Sider } = Layout
 const { Link } = Anchor
 
-export default ({ routes }) => {
+export default ({ routes, location, history }) => {
   const [collapsed, setCollapsed] = useState(false)
   return (
     <Layout>
@@ -29,7 +30,9 @@ export default ({ routes }) => {
         >
           <MenuContext />
         </Sider>
-        <Content>123</Content>
+        <Content>
+          <CRouter routes={routes} />
+        </Content>
         <Sider>
           <Anchor style={{ height: 'calc(100vh - 64px)' }}>
             <Link href="#components-anchor-demo-basic" title="Basic demo" />

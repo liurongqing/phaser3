@@ -5,7 +5,6 @@ import CRouter from '@/commons/component/CRouter'
 // 组件路由
 import Layout from './layouts/BasicLayout'
 
-
 import Dashboard from './modules/Dashboard'
 import SystemAdmin from './modules/System/Admin'
 import SystemMenu from './modules/System/Menu/index'
@@ -15,15 +14,16 @@ import SystemPermissions from './modules/System/Permissions/index'
 /**
  * 以下为单页路由
  */
+import pageMap from './pages/Map'
 import NotFound from './pages/404'
 import Forbidden from './pages/403'
 import Login from './pages/login'
 
 const pageRoutes = [
   {
-    redirect: true,
-    from: '/',
-    to: '/dashboard'
+    path: '/',
+    exact: true,
+    component: pageMap
   },
   {
     path: '/404',
@@ -56,10 +56,14 @@ const routes = [
         exact: true,
         component: Dashboard
       },
-      { path: '/system/admin', component: SystemAdmin },
-      { path: '/system/role', component: SystemRole },
-      { path: '/system/menu', component: SystemMenu },
-      { path: '/system/permissions', component: SystemPermissions },
+      { path: '/system/admin', exact: true, component: SystemAdmin },
+      { path: '/system/role', exact: true, component: SystemRole },
+      { path: '/system/menu', exact: true, component: SystemMenu },
+      {
+        path: '/system/permissions',
+        exact: true,
+        component: SystemPermissions
+      },
       {
         redirect: true,
         from: '*',
@@ -71,7 +75,7 @@ const routes = [
 
 export default () => {
   return (
-    <Router basename="/phaser3">
+    <Router basename={WEBPACK_PRODUCTION ? '/phaser3' : '/'}>
       <CRouter routes={routes} />
     </Router>
   )
