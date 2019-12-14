@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Layout } from 'antd'
+import { Layout, Icon } from 'antd'
 
 import CRouter from '@/commons/component/CRouter'
 import MenuContext from './MenuContext'
@@ -13,13 +13,22 @@ export default ({ routes, location, history }) => {
   return (
     <Layout>
       <Header>
-        <div className="phaser3-logo">Phaser3 笔记</div>
+        <div className="phaser3-logo">
+          <Icon
+            type={collapsed ? 'menu-unfold' : 'menu-fold'}
+            onClick={() => {
+              setCollapsed(!collapsed)
+            }}
+          />{' '}
+          Phaser3 笔记
+        </div>
       </Header>
       <Layout>
         <Sider
           trigger={null}
           breakpoint="lg"
           width="256"
+          collapsedWidth={0}
           collapsed={collapsed}
           onCollapse={collapsed => {
             setCollapsed(collapsed)
