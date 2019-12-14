@@ -4,8 +4,8 @@
 
 ## 已完成
 
-- [x] [Display](/display)
+- [x]  [Display](/phaser3/display)
 
 ## 进行中
 
-- [ ] [Cache](/cache)
+- [ ]  [Cache](/phaser3/cache)
