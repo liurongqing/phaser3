@@ -24,40 +24,7 @@ export const Store = createContext('global')
 
 const initialState = {
   status: 1,
-  anchors: [
-    {
-      href: '#test1',
-      title: 'test1',
-      children: [
-        {
-          href: '#test2',
-          title: 'test2'
-        },
-        {
-          href: '#test3',
-          title: 'test3'
-        }
-      ]
-    },
-    {
-      href: '#test44',
-      title: 'test44',
-      children: [
-        {
-          href: '#test4',
-          title: 'test4'
-        },
-        {
-          href: '#test5',
-          title: 'test5'
-        },
-        {
-          href: '#test6',
-          title: 'test6'
-        }
-      ]
-    }
-  ]
+  anchors: []
 }
 
 const reducer = (state: Object, action: any) => {

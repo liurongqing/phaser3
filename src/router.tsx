@@ -16,7 +16,7 @@ import Animation from './modules/Animation'
 import Audio from './modules/Audio'
 import Cache from './modules/Cache'
 import Camera from './modules/Camera'
-import Components from './modules/Components'
+import ComponentsData from './modules/Components/Data/index'
 import DepthSorting from './modules/DepthSorting'
 import Display from './modules/Display'
 import Events from './modules/Events'
@@ -39,8 +39,6 @@ import Timestep from './modules/Timestep'
 import Transform from './modules/Transform'
 import Tweens from './modules/Tweens'
 import Utils from './modules/Utils'
-
-
 
 export const routesData = [
   {
@@ -89,8 +87,15 @@ export const routesData = [
     id: 70,
     parentId: 0,
     text: 'Components',
-    path: '/components',
-    component: Components
+    exact: true,
+    path: '/components'
+  },
+  {
+    id: 71,
+    parentId: 70,
+    text: 'Data',
+    path: '/components/data',
+    component: ComponentsData
   },
   {
     id: 80,
@@ -245,7 +250,7 @@ export const routesData = [
     text: 'Utils',
     path: '/utils',
     component: Utils
-  },
+  }
 ]
 
 const routes = [
