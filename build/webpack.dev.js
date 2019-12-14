@@ -8,12 +8,6 @@ module.exports = merge(common, {
     port: 9099,
     historyApiFallback: true,
     contentBase: './docs',
-    proxy: [
-      {
-        context: ['/admin', '/auth'],
-        target: 'http://localhost:9001',
-        changeOrigin: true
-      }
-    ]
+    inline: true
   }
 })

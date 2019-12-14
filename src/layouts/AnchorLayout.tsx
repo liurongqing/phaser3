@@ -27,7 +27,12 @@ export default () => {
   return (
     <Anchor
       affix={false}
-      style={{ height: 'calc(100vh - 48px)', paddingTop: 30 }}
+      style={{
+        height: 'calc(100vh - 48px)',
+        overflow: 'auto',
+        paddingTop: 30,
+        paddingBottom: 30
+      }}
       showInkInFixed={true}
       getContainer={() =>
         window.document.querySelector('.phaser3-content') as HTMLElement

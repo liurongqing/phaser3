@@ -30,18 +30,10 @@ export default ({ routes, location, history }) => {
         <Content className="phaser3-content markdown-body">
           <CRouter routes={routes} />
         </Content>
-        <Sider collapsed={collapsed}>
+        <Sider collapsed={collapsed} collapsedWidth={0}>
           <AnchorLayout />
         </Sider>
       </Layout>
-
-      {/* <Layout style={{ marginLeft: collapsed ? 80 : 256, minHeight: '100vh' }}>
-        <Header1 collapsed={collapsed} setCollapsed={setCollapsed} />
-        <Content className="basic-layout-content">
-          <CRouter routes={routes} />
-        </Content>
-        <Footer />
-      </Layout> */}
     </Layout>
   )
 }

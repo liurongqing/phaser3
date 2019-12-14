@@ -48,7 +48,7 @@ const MenuContext = ({ location }) => {
       mode="inline"
       defaultSelectedKeys={[currentKeys.join('')]}
       defaultOpenKeys={currentKeys}
-      style={{ height: 'calc(100vh - 48px)' }}
+      style={{ height: 'calc(100vh - 48px)', overflow: 'auto' }}
     >
       {CMenu}
     </Menu>
