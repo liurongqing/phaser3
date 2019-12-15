@@ -24,7 +24,8 @@ import GameConfig from './modules/GameConfig'
 import GameObjects from './modules/GameObjects'
 import Geom from './modules/Geom'
 import Input from './modules/Input'
-import Loader from './modules/Loader'
+import LoaderWebfont from './modules/Loader/Webfont'
+// import Loader from './modules/Loader'
 import Path from './modules/Path'
 import Physics from './modules/Physics'
 import Plugins from './modules/Plugins'
@@ -150,8 +151,15 @@ export const routesData = [
     id: 150,
     parentId: 0,
     text: 'Loader',
-    path: '/loader',
-    component: Loader
+    exact: true,
+    path: '/loader'
+  },
+  {
+    id: 151,
+    parentId: 150,
+    text: 'Webfont',
+    path: '/loader/webfont',
+    component: LoaderWebfont
   },
   {
     id: 160,

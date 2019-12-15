@@ -1,9 +1,7 @@
 // CodeBlock
 import * as React from 'react'
-import hljs from 'highlight.js/lib/highlight'
-import javascript from 'highlight.js/lib/languages/javascript'
+import * as hljs from 'highlight.js'
 const { useRef, useEffect } = React
-hljs.registerLanguage('javascript', javascript)
 
 export default ({ language, value }) => {
   const codeEl = useRef(null)
