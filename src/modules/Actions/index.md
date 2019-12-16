@@ -171,9 +171,13 @@ Phaser.Actions.WrapInRectangle(
 
 ### Phaser.Actions.PlaceOnCircle()
 
-> 圆
+> 圆的轨迹上置放精灵  
+> `Phaser.Actions.PlaceOnCircle(items, circle [,startAngle] [,endAngle])`
 
 ```js
+const groups = this.add.group()
+const circle = new Phaser.Geom.Circle(400, 300, 260)
+Phaser.Actions.PlaceOnCircle(groups.getChildren(), circle)
 ```
 
 ### Phaser.Actions.PlaceOnEllipse()
