@@ -19,6 +19,7 @@ export default ({ source }) => {
   return (
     <ReactMarkdown
       source={source}
+      escapeHtml={false}
       renderers={{
         heading: HeadingBlock,
         code: CodeBlock
