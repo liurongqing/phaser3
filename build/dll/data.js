@@ -8,11 +8,11 @@ module.exports = [
   },
   {
     name: 'lib',
-    libs: ['moment']
+    libs: ['react-markdown', 'highlight.js']
   },
   {
     name: 'antd',
     libs: ['antd'],
-    ref: ['react', 'lib']
+    ref: ['react']
   }
 ]

@@ -1,9 +1,10 @@
 const path = require('path')
 const webpack = require('webpack')
 const fs = require('fs')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const env = process.env.NODE_ENV || 'production'
 const isProduction = env === 'production'
 
@@ -57,7 +58,12 @@ const config = {
       { test: /\.tsx?$/, exclude: /node_modules/, loader: 'babel-loader' },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          'css-loader'
+        ]
       },
       {
         test: /\.md$/,
@@ -67,6 +73,9 @@ const config = {
   },
   plugins: [
     ...manifests,
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+    }),
     new CopyPlugin([
       {
         from: `../build/dll/res/${env}/*.js`,
