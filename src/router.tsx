@@ -22,7 +22,14 @@ import Display from './modules/Display'
 import Events from './modules/Events'
 import GameConfig from './modules/GameConfig'
 import GameObjects from './modules/GameObjects'
-import Geom from './modules/Geom'
+import GeomCircle from './modules/Geom/Circle'
+import GeomEllipse from './modules/Geom/Ellipse'
+import GeomIntersects from './modules/Geom/Intersects'
+import GeomLine from './modules/Geom/Line'
+import GeomPointer from './modules/Geom/Pointer'
+import GeomPolygon from './modules/Geom/Polygon'
+import GeomRectangle from './modules/Geom/Rectangle'
+import GeomTriangle from './modules/Geom/Triangle'
 import Input from './modules/Input'
 import LoaderWebfont from './modules/Loader/Webfont'
 // import Loader from './modules/Loader'
@@ -40,6 +47,8 @@ import Timestep from './modules/Timestep'
 import Transform from './modules/Transform'
 import Tweens from './modules/Tweens'
 import Utils from './modules/Utils'
+import ConstProperty from './modules/Const/Property'
+import ConstStaticMethod from './modules/Const/StaticMethod'
 
 export const routesData = [
   {
@@ -137,8 +146,63 @@ export const routesData = [
     id: 130,
     parentId: 0,
     text: 'Geom',
-    path: '/geom',
-    component: Geom
+    path: '/geom'
+  },
+  {
+    id: 131,
+    parentId: 130,
+    text: 'Circle',
+    path: '/geom/circle',
+    component: GeomCircle
+  },
+  {
+    id: 132,
+    parentId: 130,
+    text: 'Ellipse',
+    path: '/geom/ellipse',
+    component: GeomEllipse
+  },
+  {
+    id: 133,
+    parentId: 130,
+    text: 'Intersects',
+    path: '/geom/intersects',
+    component: GeomIntersects
+  },
+  {
+    id: 134,
+    parentId: 130,
+    text: 'Line',
+    path: '/geom/line',
+    component: GeomLine
+  },
+  {
+    id: 135,
+    parentId: 130,
+    text: 'Point',
+    path: '/geom/point',
+    component: GeomPointer
+  },
+  {
+    id: 136,
+    parentId: 130,
+    text: 'Polygon',
+    path: '/geom/polygon',
+    component: GeomPolygon
+  },
+  {
+    id: 137,
+    parentId: 130,
+    text: 'Rectangle',
+    path: '/geom/rectangle',
+    component: GeomRectangle
+  },
+  {
+    id: 138,
+    parentId: 130,
+    text: 'Triangle',
+    path: '/geom/triangle',
+    component: GeomTriangle
   },
   {
     id: 140,
@@ -258,6 +322,26 @@ export const routesData = [
     text: 'Utils',
     path: '/utils',
     component: Utils
+  },
+  {
+    id: 300,
+    parentId: 0,
+    text: 'Const',
+    path: '/const'
+  },
+  {
+    id: 301,
+    parentId: 300,
+    text: 'Property',
+    path: '/const/property',
+    component: ConstProperty
+  },
+  {
+    id: 302,
+    parentId: 300,
+    text: 'Static Method',
+    path: '/const/staticmethod',
+    component: ConstStaticMethod
   }
 ]
 
