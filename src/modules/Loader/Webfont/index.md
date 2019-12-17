@@ -39,7 +39,7 @@ Webfont.load({
 ## 使用自定义字体
 
 ```js
-this.add.text(0, 0, 'custom font', {
+scene.add.text(0, 0, 'custom font', {
   fontFamily: 'customname'
 })
 ```

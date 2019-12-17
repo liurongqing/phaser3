@@ -95,7 +95,7 @@
 1. 透明度动画
 
    ```js
-   this.tweens.add({
+   scene.tweens.add({
      targets: image, // 精灵
      alphaTopLeft: {
        value: 1, // 透明度
@@ -111,7 +111,7 @@
 1. 基本
 
    ```js
-   const renderer = this.sys.game.renderer
+   const renderer = scene.sys.game.renderer
    const modeIndex = renderer.addBlendMode([gl.ZERO, gl.SRC_COLOR], gl.FUNC_ADD)
    image.setBlendMode(modeIndex)
    ```
@@ -167,14 +167,14 @@
 1. 创建 mask 方式： `createGeometryMask()`
 
    ```js
-   const shape = this.make.graphics()
+   const shape = scene.make.graphics()
    const mask = shape.createGeometryMask()
    ```
 
 1. 创建 mask 方式：`Phaser.Display.Masks.BitmapMask()`
 
    ```js
-   const sprite = this.make.sprite({
+   const sprite = scene.make.sprite({
      x: 100,
      y: 100,
      key: 'sp',
