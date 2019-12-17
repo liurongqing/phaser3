@@ -146,6 +146,7 @@ export const routesData = [
     id: 130,
     parentId: 0,
     text: 'Geom',
+    exact: true,
     path: '/geom'
   },
   {
@@ -327,6 +328,7 @@ export const routesData = [
     id: 300,
     parentId: 0,
     text: 'Const',
+    exact: true,
     path: '/const'
   },
   {
