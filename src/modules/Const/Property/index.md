@@ -18,11 +18,7 @@ Phaser.VERSION // 版本号
 ## Phaser.Actions
 
 ```js
-Phaser.Actions.Angle(items, value [,step] [,index] [,direction]) // 批量操作角度
-Phaser.Actions.Call(items, callback, context) // 遍历回调
-Phaser.Actions.GetFirst(items, compare [,index]) // 查找第一个符合属性值为 compare 属性的对象
-Phaser.Actions.GetLast(items, compare [,index]) //  查找最后一个符合属性值为 compare 属性的对象
-Phaser.Actions.GridAlign(items, options) // 对数组元素排列
+
 ```
 
 ## Phaser.Animations

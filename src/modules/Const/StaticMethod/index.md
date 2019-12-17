@@ -2,6 +2,23 @@
 
 ## Phaser.Actions
 
+```js
+Phaser.Actions.Angle(items, value [,step] [,index] [,direction]) // 批量操作角度
+Phaser.Actions.Call(items, callback, context) // 遍历回调
+Phaser.Actions.GetFirst(items, compare [,index]) // 查找第一个符合属性值为 compare 属性的对象
+Phaser.Actions.GetLast(items, compare [,index]) //  查找最后一个符合属性值为 compare 属性的对象
+Phaser.Actions.GridAlign(items, options) // 对数组元素排列
+Phaser.Actions.IncAlpha(items, value [,step] [,index] [,direction]) // 设置透明度
+Phaser.Actions.IncX(items, value [,step] [,index] [,direction]) // 批量设置 x 坐标
+Phaser.Actions.IncY(items, value [,step] [,index] [,direction]) // 批量设置 y 坐标
+Phaser.Actions.IncXY(items, x [,y] [,stepX] [,stepY] [,index] [,direction]) // 批量设置 x、y 坐标
+Phaser.Actions.PlaceOnCircle(items, circle [,startAngle] [,endAngle]) // 在圆轨迹上置放精灵
+Phaser.Actions.PlaceOnEllipse(items, ellipse [,startAngle] [,endAngle]) // 在椭圆轨迹上置放精灵
+Phaser.Actions.PlaceOnLine(items, line) // 在线轨迹上置放精灵
+Phaser.Actions.PlaceOnRrectangle(items, rect [,shift]) // 在矩形轨迹置放精灵
+Phaser.Actions.PlaceOnTriangle(items, triangle [,stepRate]) // 在三角形轨迹置放精灵
+```
+
 ## Phaser.Animations
 
 ## Phaser.BlendModes
