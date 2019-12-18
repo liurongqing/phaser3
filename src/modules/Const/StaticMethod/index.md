@@ -59,15 +59,7 @@ Phaser.Actions.WrapInRectangle(items, rect [,padding]) // 在矩形内
 
 ## Phaser.Animations
 
-### Phaser.Animation
-### Phaser.AnimationFrame
-### Phaser.AnimationManager
-
-### Phaser.Animations.Events
-
-```js
-
-```
+> 暂无
 
 ## Phaser.BlendModes
 
@@ -79,32 +71,211 @@ Phaser.Actions.WrapInRectangle(items, rect [,padding]) // 在矩形内
 
 ## Phaser.Create
 
+```js
+Phaser.Create.Palettes.ARNE16() // 调色板
+Phaser.Create.Palettes.C64() // 调色板
+Phaser.Create.Palettes.CGA() // 调色板
+Phaser.Create.Palettes.JMP() // 调色板
+Phaser.Create.Palettes.MSX() // 调色板
+```
+
 ## Phaser.Curves
+
+> 暂无
 
 ## Phaser.Data
 
+> 暂无
+
 ## Phaser.Device
+
+> 暂无
 
 ## Phaser.Display
 
+### Align
+
+> 对齐
+
+#### In
+
+> 在一个对象内
+
+```js
+Phaser.Display.Align.In.BottomLeft(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.BottomRight(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.TopLeft(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.TopRight(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.LeftCenter(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.RightCenter(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.TopCenter(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.BottomCenter(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.Center(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.QuickSet(childObject, parentObject, ALIGN_CONST [,offsetX] [,offsetY])
+```
+
+### To
+
+> 在一个对象外侧
+
+```js
+Phaser.Display.Align.In.BottomCenter(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.BottomLeft(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.BottomRight(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.LeftCenter(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.LeftTop(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.LeftBottom(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.RightCenter(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.RightTop(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.RightBottom(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.TopCenter(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.TopLeft(childObject, parentObject [,offsetX] [,offsetY])
+Phaser.Display.Align.In.TopRight(childObject, parentObject [,offsetX] [,offsetY])
+```
+
+### Bounds
+
+> 界限
+
+```js
+Phaser.Display.Bounds.CenterOn(gameObject, x, y)
+Phaser.Display.Bounds.GetBottom(gameObject)
+Phaser.Display.Bounds.GetCenterY(gameObject)
+Phaser.Display.Bounds.GetLeft(gameObject)
+Phaser.Display.Bounds.GetRight(gameObject)
+Phaser.Display.Bounds.GetOffsetX(gameObject)
+Phaser.Display.Bounds.GetOffsetY(gameObject)
+Phaser.Display.Bounds.GetTop(gameObject)
+
+Phaser.Display.Bounds.SetCenterX(gameObject, x)
+Phaser.Display.Bounds.SetCenterY(gameObject, y)
+Phaser.Display.Bounds.SetLeft(gameObject, value)
+Phaser.Display.Bounds.SetRight(gameObject, value)
+Phaser.Display.Bounds.SetTop(gameObject, value)
+```
+
+### Canvas
+
+```js
+Phaser.Display.Canvas.TouchAction(canvas [,value])
+Phaser.Display.Canvas.UserSelect(canvas [,value])
+```
+
+#### CanvasInterpolation
+
+```js
+Phaser.Display.Canvas.CanvasInterpolation.setBicubic(canvas)
+Phaser.Display.Canvas.CanvasInterpolation.setCrisp(canvas)
+```
+
+#### CanvasPool
+
+```js
+Phaser.Display.Canvas.CanvasPool.create(parent [,width] [,height] [,canvasType] [,selfParent])
+Phaser.Display.Canvas.CanvasPool.create2D(parent [,width] [,height])
+Phaser.Display.Canvas.CanvasPool.createWebGL(parent [,width] [,height])
+Phaser.Display.Canvas.CanvasPool.disableSmoothing()
+Phaser.Display.Canvas.CanvasPool.enableSmoothing()
+Phaser.Display.Canvas.CanvasPool.first([canvasType])
+Phaser.Display.Canvas.CanvasPool.free()
+Phaser.Display.Canvas.CanvasPool.remove(parent)
+Phaser.Display.Canvas.CanvasPool.total()
+```
+
+#### Smoothing
+
+```js
+Phaser.Display.Canvas.Smoothing.disable(context)
+Phaser.Display.Canvas.Smoothing.enable(context)
+Phaser.Display.Canvas.Smoothing.getPrefix(context)
+Phaser.Display.Canvas.Smoothing.isEnabled(context)
+```
+
+### Color
+
+```js
+Phaser.Display.Color.ColorToRGBA(color)
+Phaser.Display.Color.ComponentToHex(color)
+Phaser.Display.Color.GetColor(red, green, blue)
+Phaser.Display.Color.GetColor32(red, green, blue, alpha)
+Phaser.Display.Color.HexStringToColor(hex)
+Phaser.Display.Color.HSLToColor(h, s, l)
+Phaser.Display.Color.HSVColorWheel([s] [,v])
+Phaser.Display.Color.HSVToRGB(h, s, l [,out])
+Phaser.Display.Color.HueToComponent(p, q, t)
+Phaser.Display.Color.IntegerToColor(input)
+Phaser.Display.Color.IntegerToRGB(input)
+Phaser.Display.Color.ObjectToColor(input)
+Phaser.Display.Color.RandomRGB([min] [,max])
+Phaser.Display.Color.RGBStringToColor(rgb)
+Phaser.Display.Color.RGBToHSV(r, g, b [,out])
+Phaser.Display.Color.RGBToString(r, g, b [,a] [,prefix])
+Phaser.Display.Color.ValueToColor(input)
+```
+
 ## Phaser.DOM
+
+```js
+Phaser.DOM.AddToDOM(element [,parent])
+Phaser.DOM.DOMContentLoaded(callback)
+Phaser.DOM.GetInnerHeight(iOS)
+Phaser.DOM.GetScreenOrientation(width, height)
+Phaser.DOM.GetTarget(element)
+Phaser.DOM.ParseXML(data)
+Phaser.DOM.RemoveFromDOM(element)
+```
 
 ## Phaser.Events
 
+> 暂无
+
 ## Phaser.GameObjects
+
+```js
+Phaser.GameObjects.BuildGameObject(scene, gameObject, config)
+Phaser.GameObjects.BuildGameObjectAnimation(sprite, config)
+```
 
 ## Phaser.Geom
 
+### Circle
+
 ```js
-Phaser.Geom.Circle.Clone(circle) // 克隆一个圆
+Phaser.Geom.Circle.Area(circle) // 圆面积
+Phaser.Geom.Circle.Circumference(circle) // 圆周长
+Phaser.Geom.Circle.CircumferencePoint(circle, Phasr.Math.PI2, point) // 在圆上的点，可以是矩形、圆形
+Phaser.Geom.Circle.Clone(source) // 克隆一个圆
+Phaser.Geom.Circle.Contains(circle, x, y) // 点是否在圆中
 Phaser.Geom.Circle.ContainsPoint(circle, point) // 点是否在圆中
 Phaser.Geom.Circle.ContainsRect(circle, rect) // 矩形是否在圆中
-Phaser.Geom.Circle.CopyFrom(bigCircle, smallCircle) // 小圆填充到大圆中
+Phaser.Geom.Circle.CopyFrom(source, dest) // 小圆填充到大圆中
 Phaser.Geom.Circle.Equals(circle1, circle2) // 比较两圆大小是否相等
-Phaser.Geom.Circle.OffsetPoint(circle, point) // 圆相对点的纵横偏移
+Phaser.Geom.Circle.GetBounds(circle [,out]) // 获取圆的外层矩形对象
+Phaser.Geom.Circle.GetPoint(circle, position [,out]) // 根据弧度获取圆上的点
+Phaser.Geom.Circle.GetPoints(circle, quantity [,stepRate] [,output])
 Phaser.Geom.Circle.Offset(circle, xOffset, yOffset) // 同 OffsetPoint
-Phaser.Geom.Circle.GetBounds(circle) // 获取圆的外层矩形对象
-Phaser.Geom.Circle.CircumferencePoint(circle, Phasr.Math.PI2, point) // 在圆上的点，可以是矩形、圆形
+Phaser.Geom.Circle.OffsetPoint(circle, point) // 圆相对点的纵横偏移
+Phaser.Geom.Circle.Random(circle [,out])
+```
+
+### Ellipse
+
+```js
+Phaser.Geom.Ellipse.Area(ellipse) // 圆面积
+Phaser.Geom.Ellipse.Circumference(ellipse) // 圆周长
+Phaser.Geom.Ellipse.CircumferencePoint(ellipse, Phasr.Math.PI2, point) // 在圆上的点，可以是矩形、圆形
+Phaser.Geom.Ellipse.Clone(source) // 克隆一个圆
+Phaser.Geom.Ellipse.Contains(ellipse, x, y) // 点是否在圆中
+Phaser.Geom.Ellipse.ContainsPoint(ellipse, point) // 点是否在圆中
+Phaser.Geom.Ellipse.ContainsRect(ellipse, rect) // 矩形是否在圆中
+Phaser.Geom.Ellipse.CopyFrom(source, dest) // 小圆填充到大圆中
+Phaser.Geom.Ellipse.Equals(ellipse1, ellipse2) // 比较两圆大小是否相等
+Phaser.Geom.Ellipse.GetBounds(ellipse [,out]) // 获取圆的外层矩形对象
+Phaser.Geom.Ellipse.GetPoint(ellipse, position [,out]) // 根据弧度获取圆上的点
+Phaser.Geom.Ellipse.GetPoints(ellipse, quantity [,stepRate] [,output])
+Phaser.Geom.Ellipse.Offset(ellipse, xOffset, yOffset) // 同 OffsetPoint
+Phaser.Geom.Ellipse.OffsetPoint(ellipse, point) // 圆相对点的纵横偏移
+Phaser.Geom.Ellipse.Random(ellipse [,out])
 ```
 
 ## Phaser.Input
