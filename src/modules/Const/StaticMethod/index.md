@@ -395,7 +395,7 @@ Phaser.Geom.Triangle.BuildEquilateral(x, y, length) // 正三角形
 Phaser.Geom.Triangle.BuildFromPolygon(data [,holes] [,scaleX] [,scaleY] [,out]) // 3点构建一个三角形
 Phaser.Geom.Triangle.BuildRight(x, y, width, height) // 直角三角形
 Phaser.Geom.Triangle.CenterOn(triangle, x, y [,centerFunc]) // 以给定的点为中心
-Phaser.Geom.Triangle.Centroid(triangle [,out]) // 获取质心（重心）  
+Phaser.Geom.Triangle.Centroid(triangle [,out]) // 获取质心（重心）
 Phaser.Geom.Triangle.CircumCenter(triangle [,out]) // 获取外圆圆心
 Phaser.Geom.Triangle.InCenter(triangle [,out]) // 内圆中心
 Phaser.Geom.Triangle.CircumCircle(triangle [,out]) // 外接圆
@@ -414,7 +414,6 @@ Phaser.Geom.Triangle.Random(triangle [,out])
 Phaser.Geom.Triangle.Rotate(triangle, angle)
 Phaser.Geom.Triangle.RotateAroundPoint(triangle, point, angle) // 指定点旋转
 Phaser.Geom.Triangle.RotateAroundXY(triangle, x, y, angle) // 指定点旋转
-
 ```
 
 ### Intersects
@@ -422,7 +421,28 @@ Phaser.Geom.Triangle.RotateAroundXY(triangle, x, y, angle) // 指定点旋转
 > 相交
 
 ```js
-
+Phaser.Geom.Intersects.CircleToCircle(circleA, circleB) // 两圆相交
+Phaser.Geom.Intersects.CircleToRectangle(circle, rect) // 圆与矩形相交
+Phaser.Geom.Intersects.GetCircleToCircle(circle, rect [,out]) // 获取相交点 Point 对象数组
+Phaser.Geom.Intersects.GetCircleToRectangle(circle, rect [,out]) // 获取相交点 Point 对象数组
+Phaser.Geom.Intersects.GetLineToCircle(line, circle [,out]) // 获取相交点 Point 对象数组
+Phaser.Geom.Intersects.GetLineToRectangle(line, rect [,out]) // 获取相交点 Point 对象数组
+Phaser.Geom.Intersects.GetRectangleIntersection(rectA, rectB [,output]) // 获取两个矩形相交点 Point 对象数组
+Phaser.Geom.Intersects.GetRectangleToRectangle(rectA, rectB [,output]) // 获取两个矩形相交点 Point 对象数组
+Phaser.Geom.Intersects.GetRectangleToTriangle(rect, triangle [,out]) // 获取相交点Point对象数组
+Phaser.Geom.Intersects.GetTriangleToCircle(triangle, circle [,out]) // 获取相交点Point对象数组
+Phaser.Geom.Intersects.GetTriangleToLine(triangle, line [,out]) // 获取相交点Point对象数组
+Phaser.Geom.Intersects.LineToCircle(line, circle [,nearest]) // 相交
+Phaser.Geom.Intersects.LineToLine(line1, line2 [,out])// 相交
+Phaser.Geom.Intersects.LineToRectangle(line, rect)// 相交
+Phaser.Geom.Intersects.PointToLine(point, line [,lineThickness])// 点在线上
+Phaser.Geom.Intersects.PointToLineSegment(point, line) // 点在线段上
+Phaser.Geom.Intersects.RectangleToRectangle(rectA, rectB) // 相交
+Phaser.Geom.Intersects.RectangleToTriangle(rect, triangle) // 相交
+Phaser.Geom.Intersects.RectangleToValues(rect, left, right, top, bottom [,tolerance]) // 矩形与值相交
+Phaser.Geom.Intersects.TriangleToCircle(triangle, circle) // 相交
+Phaser.Geom.Intersects.TriangleToLine(triangle, line) // 相交
+Phaser.Geom.Intersects.TriangleToTriangle(triangleA, triangleB) // 相交
 ```
 
 ## Phaser.Input
