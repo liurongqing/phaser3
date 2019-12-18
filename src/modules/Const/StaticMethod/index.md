@@ -261,22 +261,80 @@ Phaser.Geom.Circle.Random(circle [,out])
 ### Ellipse
 
 ```js
-Phaser.Geom.Ellipse.Area(ellipse) // 圆面积
-Phaser.Geom.Ellipse.Circumference(ellipse) // 圆周长
-Phaser.Geom.Ellipse.CircumferencePoint(ellipse, Phasr.Math.PI2, point) // 在圆上的点，可以是矩形、圆形
-Phaser.Geom.Ellipse.Clone(source) // 克隆一个圆
-Phaser.Geom.Ellipse.Contains(ellipse, x, y) // 点是否在圆中
-Phaser.Geom.Ellipse.ContainsPoint(ellipse, point) // 点是否在圆中
-Phaser.Geom.Ellipse.ContainsRect(ellipse, rect) // 矩形是否在圆中
-Phaser.Geom.Ellipse.CopyFrom(source, dest) // 小圆填充到大圆中
-Phaser.Geom.Ellipse.Equals(ellipse1, ellipse2) // 比较两圆大小是否相等
-Phaser.Geom.Ellipse.GetBounds(ellipse [,out]) // 获取圆的外层矩形对象
-Phaser.Geom.Ellipse.GetPoint(ellipse, position [,out]) // 根据弧度获取圆上的点
+Phaser.Geom.Ellipse.Area(ellipse) // 面积
+Phaser.Geom.Ellipse.Circumference(ellipse) // 周长
+Phaser.Geom.Ellipse.CircumferencePoint(ellipse, Phasr.Math.PI2, point) // 在上面的点，可以是矩形、圆形
+Phaser.Geom.Ellipse.Clone(source) // 克隆
+Phaser.Geom.Ellipse.Contains(ellipse, x, y) // 点是否在其中
+Phaser.Geom.Ellipse.ContainsPoint(ellipse, point) // 点是否在其中
+Phaser.Geom.Ellipse.ContainsRect(ellipse, rect) // 矩形是否在其中
+Phaser.Geom.Ellipse.CopyFrom(source, dest)
+Phaser.Geom.Ellipse.Equals(ellipse1, ellipse2) // 比较两个大小是否相等
+Phaser.Geom.Ellipse.GetBounds(ellipse [,out]) // 获取外层矩形对象
+Phaser.Geom.Ellipse.GetPoint(ellipse, position [,out]) // 根据弧度获取上面的点
 Phaser.Geom.Ellipse.GetPoints(ellipse, quantity [,stepRate] [,output])
 Phaser.Geom.Ellipse.Offset(ellipse, xOffset, yOffset) // 同 OffsetPoint
-Phaser.Geom.Ellipse.OffsetPoint(ellipse, point) // 圆相对点的纵横偏移
+Phaser.Geom.Ellipse.OffsetPoint(ellipse, point) // 相对点的纵横偏移
 Phaser.Geom.Ellipse.Random(ellipse [,out])
 ```
+
+### Line
+
+```js
+Phaser.Geom.Line.Angle(line) // 角度
+Phaser.Geom.Line.BresenhamPoints(line [,stepRate] [,results]) // 线上的所有点
+Phaser.Geom.Line.CenterOn(line, x, y) // 线的中点在指定点
+Phaser.Geom.Line.Clone(source) // 克隆
+Phaser.Geom.Line.CopyFrom(source, dest)
+Phaser.Geom.Line.Equals(line1, line2) // 比较两个大小是否相等
+Phaser.Geom.Line.Extend(line, left [,right]) // 延伸
+Phaser.Geom.Line.GetMidPoint(line [,out]) // 获取中点坐标
+Phaser.Geom.Line.GetNearestPoint(line, point [,out]) // 获取垂直的点
+Phaser.Geom.Line.GetNormal(line [,out]) // 法线
+Phaser.Geom.Line.GetPoint(line, position [,out]) // 获取点
+Phaser.Geom.Line.GetPoints(line, quantity [,stepRate] [,output]) // 获取多个点
+Phaser.Geom.Line.GetShortestDistance(line, point) // 线点距离
+Phaser.Geom.Line.Width(line) // 高度
+Phaser.Geom.Line.Height(line) // 高度
+Phaser.Geom.Line.Length(line) // 长度
+Phaser.Geom.Line.NormalAngle(line) // 法线角度
+Phaser.Geom.Line.NormalX(line)
+Phaser.Geom.Line.NormalY(line)
+Phaser.Geom.Line.Offset(line, x, y)
+Phaser.Geom.Line.PerpSlope(line) // 垂直斜率
+Phaser.Geom.Line.Random(line [,out])
+Phaser.Geom.Line.ReflectAngle(lineA, lineB) // 两线之间的反射角
+Phaser.Geom.Line.Rotate(line, angle) // 旋转
+Phaser.Geom.Line.RotateAroundPoint(line, point, angle) // 旋转圆点
+Phaser.Geom.Line.RotateAroundXY(line, x, y, angle)
+Phaser.Geom.Line.SetToAngle(line, x, y, angle, length)
+Phaser.Geom.Line.Slope(line)
+```
+
+### Point
+
+```js
+Phaser.Geom.Point.Ceil(point)
+Phaser.Geom.Point.Floor(point)
+Phaser.Geom.Point.Clone(source)
+Phaser.Geom.Point.CopyFrom(source, dest)
+Phaser.Geom.Point.Equals(point, toCompare) // 相等
+Phaser.Geom.Point.GetCentroid(points [,out]) // 获取到质心
+Phaser.Geom.Point.GetMagnitude(point) // 原点到点的长度
+Phaser.Geom.Point.GetMagnitudeSq(point) // 点的大小的平方
+Phaser.Geom.Point.GetRectangleFromPoints(points [,out]) // 对齐
+Phaser.Geom.Point.Interpolate(pointA, pointB [,t] [,out])
+Phaser.Geom.Point.Invert(point) // 交换点的 x，y 坐标
+Phaser.Geom.Point.Negative(point) // 反转一个点的坐标
+Phaser.Geom.Point.Project(pointA, pointB [,out])
+Phaser.Geom.Point.ProjectUnit(pointA, pointB [,out])
+Phaser.Geom.Point.SetMagnitude(point, magnitude) // 改变二维矢量的大小
+```
+
+### Polygon
+### Rectangle
+### Triangle
+### Intersects
 
 ## Phaser.Input
 
