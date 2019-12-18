@@ -18,10 +18,25 @@ Phaser.VERSION // 版本号
 ## Phaser.Actions
 
 ```js
-
 ```
 
 ## Phaser.Animations
+
+```js
+Phaser.Animations.Events.ADD_ANIMATION // add 添加动画回调
+Phaser.Animations.Events.ANIMATION_COMPLETE // complete 动画结束回调
+Phaser.Animations.Events.ANIMATION_REPEAT // repeat 循环动画回调
+Phaser.Animations.Events.ANIMATION_RESTART // restart 重新开始动画回调
+Phaser.Animations.Events.ANIMATION_START // start 动画开始时回调
+Phaser.Animations.Events.PAUSE_ALL // pauseall 暂停所有动画时回调
+Phaser.Animations.Events.RESUME_ALL // resumeall 恢复所有动画时回调
+Phaser.Animations.Events.REMOVE_ANIMATION // remove 动画移除时回调
+
+Phaser.Animations.Events.SPRITE_ANIMATION_COMPLETE // 精灵播放完动画回调
+Phaser.Animations.Events.SPRITE_ANIMATION_KEY_COMPLETE // 特定精灵播放完动画回调
+Phaser.Animations.Events.SPRITE_ANIMATION_KEY_REPEAT // 特定精灵重复播放回调
+Phaser.Animations.Events.SPRITE_ANIMATION_KEY_RESTART // 特定精灵重新播放回调
+```
 
 ## Phaser.BlendModes
 
