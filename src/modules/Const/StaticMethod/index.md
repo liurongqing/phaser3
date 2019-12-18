@@ -332,9 +332,98 @@ Phaser.Geom.Point.SetMagnitude(point, magnitude) // 改变二维矢量的大小
 ```
 
 ### Polygon
+
+```js
+Phaser.Geom.Polygon.Clone(polygon)
+Phaser.Geom.Polygon.Contains(polygon, x, y)
+Phaser.Geom.Polygon.ContainsPoint(polygon, point)
+Phaser.Geom.Polygon.GetAABB(polygon [,out]) // 获取多边形的边界 AABB 矩形
+Phaser.Geom.Polygon.GetNumberArray(polygon [,output]) // 存储多边形的所有点坐标
+Phaser.Geom.Polygon.Reverse(polygon) // 反转多边形点的顺序
+Phaser.Geom.Polygon.GetPoints(polygon, quantity [,stepRate] [,output])
+Phaser.Geom.Polygon.Perimeter(polygon) // 周长
+Phaser.Geom.Polygon.Smooth(polygon) // 对点应用 Chaikin 平滑算法
+```
+
 ### Rectangle
+
+```js
+Phaser.Geom.Rectangle.Area(rect) // 面积
+Phaser.Geom.Rectangle.Ceil(rect) // 坐标为整数
+Phaser.Geom.Rectangle.CeilAll(rect)
+Phaser.Geom.Rectangle.Floor(rect)
+Phaser.Geom.Rectangle.FloorAll(rect)
+Phaser.Geom.Rectangle.CenterOn(rect, x, y) // 移动左上角到x, y坐标上
+Phaser.Geom.Rectangle.Clone(source)
+Phaser.Geom.Rectangle.Contains(rect, x, y)
+Phaser.Geom.Rectangle.ContainsPoint(rect, point)
+Phaser.Geom.Rectangle.ContainsRect(rectA, reactB)
+Phaser.Geom.Rectangle.CopyFrom(source, dest)
+Phaser.Geom.Rectangle.Decompose(rect [,out]) // 每个点坐标添加到一个数组中
+Phaser.Geom.Rectangle.Equals(rect, toCompare) // 相等
+Phaser.Geom.Rectangle.FitInside(target, source) // 保持长宽比在父容器中
+Phaser.Geom.Rectangle.FitOutside(target, source) // 保持长宽比铺盖全父容器
+Phaser.Geom.Rectangle.FromPoints(points [,out]) // 点都在矩形边上
+Phaser.Geom.Rectangle.GetAspectRatio(rect) // 矩形宽高比
+Phaser.Geom.Rectangle.GetCenter(rect [,out]) // 获取矩形的中心
+Phaser.Geom.Rectangle.GetPoint(rectangle, position [,out]) // 获取矩形一个点
+Phaser.Geom.Rectangle.GetPoints(rectangle, step, quantity [,out])
+Phaser.Geom.Rectangle.GetSize(rect [,out]) // 获取矩形大小，返回width, height
+Phaser.Geom.Rectangle.Inflate(rect, x, y) // 中心不变长宽变
+Phaser.Geom.Rectangle.Intersection(rectA, rectB) // 矩形的相交区域
+Phaser.Geom.Rectangle.MarchingAnts(rect, step, quantity [,out]) // 矩形周长间隔的点数组
+Phaser.Geom.Rectangle.MergePoints(target, points) // 让点全在矩形边界上或边界内
+Phaser.Geom.Rectangle.MergeRect(target, source)
+Phaser.Geom.Rectangle.MergeXY(target, x, y)
+Phaser.Geom.Rectangle.Offset(rect, x, y)
+Phaser.Geom.Rectangle.OffsetPoint(rect, point)
+Phaser.Geom.Rectangle.Overlaps(rectA, rectB) // 重叠为true
+Phaser.Geom.Rectangle.Perimeter(rect) // 周长
+Phaser.Geom.Rectangle.PerimeterPoint(rectangle, angle [,out])
+Phaser.Geom.Rectangle.Random(rect, out) // 矩形中的随机点
+Phaser.Geom.Rectangle.RandomOutside(outer, inner [,out])  // 外部矩形里，不在内矩形中的区域
+Phaser.Geom.Rectangle.SameDimensions(rect, toCompare) // 严格相等的宽度和调试
+Phaser.Geom.Rectangle.Scale(rect, x, y)
+Phaser.Geom.Rectangle.Union(rectA, rectB [,out]) // 包括这2个矩形的大矩形
+```
+
 ### Triangle
+
+```js
+Phaser.Geom.Triangle.Area(triangle) // 面积
+Phaser.Geom.Triangle.BuildEquilateral(x, y, length) // 正三角形
+Phaser.Geom.Triangle.BuildFromPolygon(data [,holes] [,scaleX] [,scaleY] [,out]) // 3点构建一个三角形
+Phaser.Geom.Triangle.BuildRight(x, y, width, height) // 直角三角形
+Phaser.Geom.Triangle.CenterOn(triangle, x, y [,centerFunc]) // 以给定的点为中心
+Phaser.Geom.Triangle.Centroid(triangle [,out]) // 获取质心（重心）  
+Phaser.Geom.Triangle.CircumCenter(triangle [,out]) // 获取外圆圆心
+Phaser.Geom.Triangle.InCenter(triangle [,out]) // 内圆中心
+Phaser.Geom.Triangle.CircumCircle(triangle [,out]) // 外接圆
+Phaser.Geom.Triangle.Clone(source)
+Phaser.Geom.Triangle.Contains(triangle, x, y)
+Phaser.Geom.Triangle.ContainsArray(triangle, points [,returnFirst] [,out])
+Phaser.Geom.Triangle.ContainsPoint(triangle, point)
+Phaser.Geom.Triangle.CopyFrom(source, dest)
+Phaser.Geom.Triangle.Decompose(triangle [,out]) // 分解成点数组
+Phaser.Geom.Triangle.Equals(triangle, toCompare)
+Phaser.Geom.Triangle.GetPoint(triangle, position [,out])
+Phaser.Geom.Triangle.GetPoints(triangle, quantity, stepRate [,out])
+Phaser.Geom.Triangle.Offset(triangle, x, y)
+Phaser.Geom.Triangle.Perimeter(triangle) // 周长
+Phaser.Geom.Triangle.Random(triangle [,out])
+Phaser.Geom.Triangle.Rotate(triangle, angle)
+Phaser.Geom.Triangle.RotateAroundPoint(triangle, point, angle) // 指定点旋转
+Phaser.Geom.Triangle.RotateAroundXY(triangle, x, y, angle) // 指定点旋转
+
+```
+
 ### Intersects
+
+> 相交
+
+```js
+
+```
 
 ## Phaser.Input
 
