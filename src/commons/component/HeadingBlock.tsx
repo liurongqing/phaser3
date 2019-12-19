@@ -14,7 +14,7 @@ const debounceSetData = debounce((dispatch: any) => {
     }
   })
   data = []
-}, 500)
+}, 100)
 
 export default ({ level, children }) => {
   const { dispatch }: any = useContext(Store)

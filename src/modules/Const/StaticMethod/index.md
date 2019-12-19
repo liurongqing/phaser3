@@ -447,11 +447,322 @@ Phaser.Geom.Intersects.TriangleToTriangle(triangleA, triangleB) // 相交
 
 ## Phaser.Input
 
+```js
+Phaser.Input.CreateInteractiveObject(gameObject, hitArea, hitAreaCallback)
+Phaser.Input.CreatePixelPerfectHandler(textureManager, alphaTolerance)
+```
+
+### InputPluginCache
+
+```js
+Phaser.Input.InputPluginCache.getCore()
+Phaser.Input.InputPluginCache.install()
+Phaser.Input.InputPluginCache.register()
+Phaser.Input.InputPluginCache.remove()
+```
+
+### Keyboard
+
+```js
+Phaser.Input.Keyboard.DownDuration(key [,duration]) // duration 时间内按下为true
+Phaser.Input.Keyboard.JustDown(key) // 快速按下为true
+Phaser.Input.Keyboard.JustUp(key) // 快速抬起为 true
+Phaser.Input.Keyboard.UpDuration(key [,duration]) // duration 时间内抬起为true
+```
+
 ## Phaser.Loader
+
+> 暂无
+
+### File
+
+```js
+Phaser.Loader.File.createObjectURL(image, blob, defaultType)
+Phaser.Loader.File.revokeObjectURL(image)
+```
+
+### Events
+
+```js
+Phaser.Loader.Events.ADD // addfile
+Phaser.Loader.Events.COMPLETE // complete
+Phaser.Loader.Events.FILE_COMPLETE // filecomplete
+Phaser.Loader.Events.FILE_KEY_COMPLETE // filecomplete-
+Phaser.Loader.Events.FILE_LOAD_ERROR // loaderror
+Phaser.Loader.Events.FILE_LOAD // load
+Phaser.Loader.Events.FILE_PROGRESS // fileprogress
+Phaser.Loader.Events.POST_PROCESS // postprocess
+Phaser.Loader.Events.PROGRESS // progress
+Phaser.Loader.Events.START // start
+```
+
+### FileTypesManager
+
+```js
+Phaser.Loader.FileTypesManager.destroy()
+Phaser.Loader.FileTypesManager.install(loader)
+Phaser.Loader.FileTypesManager.register(key, factoryFunction)
+```
 
 ## Phaser.Math
 
+```js
+Phaser.Math.Average(values) // 平均数
+Phaser.Math.Bernstein(n, i) // 整数 n > i 伯恩斯坦多项式 贝塞尔曲线的函数形式
+Phaser.Math.Between(min, max) // 最小值和最大值之间的随机整数 包括
+Phaser.Math.CatmullRom(t, p0, p1, p2, p3) // 计算 Catmull-Rom 值
+Phaser.Math.CeilTo(value [,place] [,base]) // Math.ceil(value*Math.pow(base, -place))/Math.pow(base, -place)
+Phaser.Math.FloorTo(value [,place] [,base]) // 同 CeilTo
+Phaser.Math.Clamp(value, min, max) // 值只能在最小到最大值中一个
+Phaser.Math.DegToRad(degress) // 角度转弧度
+Phaser.Math.Difference(a, b) // 两值之间的正差
+Phaser.Math.Factorial(value) // 阶乘
+Phaser.Math.FloatBetween(min, max) // 随机浮点数，包括min，不包括max
+Phaser.Math.FromPercent(percent, min [,max]) // 根据大小差值 * percent
+Phaser.Math.GetSpeed(distance, time) // 根据距离与时间获取速度
+Phaser.Math.IsEven(value) // 检查是否为偶数
+Phaser.Math.IsEvenStrict(value) // 严格检查是否为偶数
+Phaser.Math.Linear(p0, p1, t) // 计算  t 上的线性值
+Phaser.Math.MaxAdd(value, amount, max) // 两值相加， 小于最大值
+Phaser.Math.MinSub(value, amount, min) // 两值相减，大于最小值
+Phaser.Math.Percent(value, min [,max] [,upperMax]) // 值在最小与最大间的百分占比
+Phaser.Math.RadToDeg(radians) // 弧度转角度
+Phaser.Math.RandomXY(vector [,scale])
+Phaser.Math.RandomXYZ(vec3 [,radius])
+Phaser.Math.RandomXYZW(vec4 [,scale])
+Phaser.Math.Rotate(point, angle)
+Phaser.Math.RotateAround(point, x, y, angle)
+Phaser.Math.RotateAroundDistance(point, x, y, angle, distance)
+Phaser.Math.RotateVec3(vec, axis, radians)
+Phaser.Math.RoundAwayFromZero(value)
+Phaser.Math.RoundTo(value [,place] [,base])
+Phaser.Math.SinCosTableGenerator(length [,sinAmp] [,cosAmp] [,frequency])
+Phaser.Math.SmootherStep(x, min, max)
+Phaser.Math.SmoothStep(x, min, max)
+Phaser.Math.ToXY(index, width, height [,out])
+Phaser.Math.TransformXY(x, y, positionX, positionY, rotation, scaleX, scaleY [, output])
+Phaser.Math.Within(a, b, tolerance) // 检查两值是否在公差差
+Phaser.Math.Wrap(value, min, max) // 在min max之间等数算加
+```
+
+### Angle
+
+> 角度
+
+```js
+Phaser.Math.Angle.Between(x1, y1, x2, y2)
+Phaser.Math.Angle.BetweenPoints(point1, point2)
+Phaser.Math.Angle.BetweenPointsY(point1, point2)
+Phaser.Math.Angle.BetweenY(x1, y1, x2, y2)
+Phaser.Math.Angle.CounterClockwise(angle)
+Phaser.Math.Angle.Normalize(angle)
+Phaser.Math.Angle.Reverse(angle)
+Phaser.Math.Angle.RotateTo(currentAngle, targetAngle [,lerp])
+Phaser.Math.Angle.ShortestBetween(angle1, angle2)
+Phaser.Math.Angle.Wrap(angle)
+Phaser.Math.Angle.WrapDegrees(angle)
+```
+
+### Distance
+
+> 距离
+
+```js
+Phaser.Math.Distance.Between(x1, y1, x2, y2)
+Phaser.Math.Distance.Power(x1, y1, x2, y2, pow)
+Phaser.Math.Distance.Squared(x1, y1, x2, y2)
+```
+
+### Easing
+
+> 动画曲线
+
+1. Phaser.Math.Easing.Back
+
+   > 返回效果
+
+   ```js
+   Phaser.Math.Easing.Back.In(v [,overshoot])
+   Phaser.Math.Easing.Back.InOut(v [,overshoot])
+   Phaser.Math.Easing.Back.Out(v [,overshoot])
+   ```
+
+1. Phaser.Math.Easing.Bounce
+
+   > 反弹
+
+   ```js
+   Phaser.Math.Easing.Bounce.In(v)
+   Phaser.Math.Easing.Bounce.InOut(v)
+   Phaser.Math.Easing.Bounce.Out(v)
+   ```
+
+1. Phaser.Math.Easing.Circular
+
+   > 圆形
+
+   ```js
+   Phaser.Math.Easing.Circular.In(v)
+   Phaser.Math.Easing.Circular.InOut(v)
+   Phaser.Math.Easing.Circular.Out(v)
+   ```
+
+1. Phaser.Math.Easing.Cubic
+
+   > 立方
+
+   ```js
+   Phaser.Math.Easing.Cubic.In(v)
+   Phaser.Math.Easing.Cubic.InOut(v)
+   Phaser.Math.Easing.Cubic.Out(v)
+   ```
+
+1. Phaser.Math.Easing.Elastic
+
+   > 有弹性的
+
+   ```js
+   Phaser.Math.Easing.Elastic.In(v [,amplitude] [,period])
+   Phaser.Math.Easing.Elastic.InOut(v [,amplitude] [,period])
+   Phaser.Math.Easing.Elastic.Out(v [,amplitude] [,period])
+   ```
+
+1. Phaser.Math.Easing.Expo
+
+   ```js
+   Phaser.Math.Easing.Expo.In(v)
+   Phaser.Math.Easing.Expo.InOut(v)
+   Phaser.Math.Easing.Expo.Out(v)
+   ```
+
+1. Phaser.Math.Easing.Linear
+
+   > 线性
+
+   ```js
+   Phaser.Math.Easing.Linear(v)
+   ```
+
+1. Phaser.Math.Easing.Quadratic
+
+   > 二次方程
+
+   ```js
+   Phaser.Math.Easing.Quadratic.In(v)
+   Phaser.Math.Easing.Quadratic.InOut(v)
+   Phaser.Math.Easing.Quadratic.Out(v)
+   ```
+
+1. Phaser.Math.Easing.Quartic
+
+   > 四次方程
+
+   ```js
+   Phaser.Math.Easing.Quartic.In(v)
+   Phaser.Math.Easing.Quartic.InOut(v)
+   Phaser.Math.Easing.Quartic.Out(v)
+   ```
+
+1. Phaser.Math.Easing.Quintic
+
+   > 五次方程
+
+   ```js
+   Phaser.Math.Easing.Quintic.In(v)
+   Phaser.Math.Easing.Quintic.InOut(v)
+   Phaser.Math.Easing.Quintic.Out(v)
+   ```
+
+1. Phaser.Math.Easing.Sine
+
+   > 正弦
+
+   ```js
+   Phaser.Math.Easing.Sine.In(v)
+   Phaser.Math.Easing.Sine.InOut(v)
+   Phaser.Math.Easing.Sine.Out(v)
+   ```
+
+1. Phaser.Math.Easing.Stepped
+
+   > 阶梯式
+
+   ```js
+   Phaser.Math.Easing.Stepped(v [,steps])
+   ```
+
+### Fuzzy
+
+> 模糊
+
+```js
+Phaser.Math.Fuzzy.Ceil(value [,epsilon]) // 模糊上限
+Phaser.Math.Fuzzy.Equal(a, b [,epsilon]) // 差值内模糊相等
+Phaser.Math.Fuzzy.Floor(value [,epsilon]) // 模糊下限
+Phaser.Math.Fuzzy.GreaterThan(a, b [,epsilon]) // a > b - epsilon 为 true
+Phaser.Math.Fuzzy.LessThan(a, b [,epsilon]) // a < b + epsilon 为 true
+```
+
+### Interpolation
+
+> 插入
+
+```js
+Phaser.Math.Interpolation.Bezier(v, k)
+Phaser.Math.Interpolation.CatmullRom(v, k)
+Phaser.Math.Interpolation.CubicBezier(t, p0, p1, p2, p3)
+Phaser.Math.Interpolation.Linear(v, k)
+Phaser.Math.Interpolation.QuadraticBezier(t, p0, p1, p2)
+Phaser.Math.Interpolation.SmootherStep(t, min, max)
+Phaser.Math.Interpolation.SmoothStep(t, min, max)
+```
+
+### Pow2
+
+```js
+Phaser.Math.Pow2.GetNext(value) // 返回给定值的最近的幂值
+Phaser.Math.Pow2.IsSize(width, height) // 检查宽度与高度是否为2的幂
+Phaser.Math.Pow2.IsValue(value) // 是否是2的幂
+```
+
+### Snap
+
+> 提前
+
+```js
+Phaser.Math.Snap.Ceil(value, gap [,start] [,divide]) // 网格切片取值
+Phaser.Math.Snap.Floor(value, gap [,start] [,divide]) // 网格切片取值
+Phaser.Math.Snap.To(value, gap [,start] [,divide]) // 网格切片取值
+```
+
+### RND
+
+> 种子随机数
+
+```js
+Phaser.Math.RND.angle() // -180 到 180 度，随机一个角度
+Phaser.Math.RND.rotation() // 随机返回一个弧度 -3.141 和 3.141 之间
+Phaser.Math.RND.between(min, max) // 介于之间的随机整数，包括最小值和最大值
+Phaser.Math.RND.integerInRange(min, max) // 同 between
+Phaser.Math.RND.frac() // 随机生成0 到 1的实数
+Phaser.Math.RND.init(seeds) // 初始化种子
+Phaser.Math.RND.integer() // 返回 0 到 2^32 之间的随机整数
+Phaser.Math.RND.normal() // -1 到 1 的随机实数
+Phaser.Math.RND.pick(array) // 从给定数组中随机返回一个元素
+Phaser.Math.RND.real() // 返回 0 到 2 ^ 32 之间的随机实数
+Phaser.Math.RND.realInRange(min, max) // 返回之间的随机实数
+Phaser.Math.RND.shuffle(array) // 对数组重新排序
+Phaser.Math.RND.sign() // 返回 -1 或 1
+Phaser.Math.RND.sow(seeds) // 重置随机种子
+Phaser.Math.RND.state([state]) // 获取或设置生成器的状态，保存与还原数据
+Phaser.Math.RND.timestamp(min, max) // 默认返回2000年初到2020年底的时间戳
+Phaser.Math.RND.uuid() // 返回一个 https://gist.github.com/1308368 RFC4122版本4 ID 十六进制字符串
+Phaser.Math.RND.weightedPick(array) // 随机返回一个元素，利于前面的条目
+```
+
 ## Phaser.Physics
+
+> 太多了，后面慢慢加
 
 ## Phaser.Plugins
 
