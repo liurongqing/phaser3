@@ -158,6 +158,8 @@ Phaser.Device.Video
 
 ## Phaser.Display
 
+> 暂无
+
 ### Align
 
 ```js
@@ -176,17 +178,13 @@ Phaser.Display.Align.BOTTOM_CENTER // 11
 Phaser.Display.Align.BOTTOM_RIGHT // 12
 ```
 
-### Bounds
-
-### Canvas
-
-### Color
-
-### Masks
-
 ## Phaser.DOM
 
+> 暂无
+
 ## Phaser.Events
+
+> 暂无
 
 ## Phaser.GameObjects
 
@@ -592,30 +590,157 @@ Phaser.Scenes.Events.BOOT // boot
 Phaser.Scenes.Events.CREATE // create
 Phaser.Scenes.Events.DESTROY // destroy
 Phaser.Scenes.Events.PAUSE // pause
-Phaser.Scenes.Events.BOOT // boot
-Phaser.Scenes.Events.BOOT // boot
-Phaser.Scenes.Events.BOOT // boot
-Phaser.Scenes.Events.BOOT // boot
-Phaser.Scenes.Events.BOOT // boot
-Phaser.Scenes.Events.BOOT // boot
-Phaser.Scenes.Events.BOOT // boot
-Phaser.Scenes.Events.BOOT // boot
-Phaser.Scenes.Events.BOOT // boot
-Phaser.Scenes.Events.BOOT // boot
+Phaser.Scenes.Events.POST_UPDATE // postupdate
+Phaser.Scenes.Events.PRE_UPDATE // preupdate
+Phaser.Scenes.Events.READY // ready
+Phaser.Scenes.Events.RENDER // render
+Phaser.Scenes.Events.RESUME // resume
+Phaser.Scenes.Events.SHUTDOWN // shutdown
+Phaser.Scenes.Events.SLEEP // sleep
+Phaser.Scenes.Events.START // start
+Phaser.Scenes.Events.TRANSITION_COMPLETE // transitioncomplete
+Phaser.Scenes.Events.TRANSITION_INIT // transitioninit
+Phaser.Scenes.Events.TRANSITION_OUT // transitionout
+Phaser.Scenes.Events.TRANSITION_START // transitionstart
+Phaser.Scenes.Events.TRANSITION_WAKE // transitionwake
+Phaser.Scenes.Events.UPDATE // update
+Phaser.Scenes.Events.WAKE // wake
+```
+
+### Settings
+
+```js
+Phaser.Scenes.Settings.create(config)
 ```
 
 ## Phaser.Sound
 
+```js
+Phaser.Sound.SoundManagerCreator(game)
+```
+
+### Events
+
+```js
+Phaser.Sound.Events.COMPLETE // complete
+Phaser.Sound.Events.DECODED_ALL // decodedall
+Phaser.Sound.Events.DECODED // decoded
+Phaser.Sound.Events.DESTROY // destroy
+Phaser.Sound.Events.DETUNE // detune
+Phaser.Sound.Events.GLOBAL_DETUNE // detune
+Phaser.Sound.Events.GLOBAL_MUTE // mute
+Phaser.Sound.Events.GLOBAL_RATE // rate
+Phaser.Sound.Events.GLOBAL_VOLUME // volume
+Phaser.Sound.Events.LOOP // loop
+Phaser.Sound.Events.LOOPED // looped
+Phaser.Sound.Events.MUTE // mute
+Phaser.Sound.Events.PAUSE_ALL // pauseall
+Phaser.Sound.Events.PAUSE // pause
+Phaser.Sound.Events.PLAY // play
+Phaser.Sound.Events.RATE // rate
+Phaser.Sound.Events.RESUME_ALL // resumeall
+Phaser.Sound.Events.RESUME // resume
+Phaser.Sound.Events.SEEK // seek
+Phaser.Sound.Events.STOP_ALL // stopall
+Phaser.Sound.Events.STOP // stop
+Phaser.Sound.Events.UNLOCKED // unlocked
+Phaser.Sound.Events.VOLUME // volume
+```
+
 ## Phaser.Structs
+
+> 结构体
+
+### Events
+
+```js
+Phaser.Structs.PROCESS_QUEUE_ADD // add
+Phaser.Structs.PROCESS_QUEUE_REMOVE // remove
+```
 
 ## Phaser.Textures
 
+```js
+Phaser.Textures.LINEAR
+Phaser.Textures.NEAREST
+```
+
+### Events
+
+```js
+Phaser.Textures.Events.ADD // addtexture
+Phaser.Textures.Events.ERROR // onerror
+Phaser.Textures.Events.LOAD // onload
+Phaser.Textures.Events.READY // ready
+Phaser.Textures.Events.REMOVE // removetexture
+```
+
+### FilterMode
+
+```js
+Phaser.Textures.FilterMode.LINEAR // 0
+Phaser.Textures.FilterMode.NEAREST // 1
+```
+
 ## Phaser.Tilemaps
+
+```js
+Phaser.Tilemaps.ParseToTilemap(scene [, key] [, tileWidth] [, tileHeight] [, width] [, height] [, data] [, insertNull])
+```
+
+### Formats
+
+```js
+Phaser.Tilemaps.Formats.CSV // 0
+Phaser.Tilemaps.Formats.TILED_JSON // 1
+Phaser.Tilemaps.Formats.ARRAY_2D // 2
+Phaser.Tilemaps.Formats.WELTMEISTER // 3
+```
 
 ## Phaser.Time
 
+> 暂无
+
 ## Phaser.Tweens
 
-## Phaser.Types
+```js
+Phaser.Tweens.CREATED // 0
+Phaser.Tweens.INIT // 1
+Phaser.Tweens.DELAY // 2
+Phaser.Tweens.OFFSET_DELAY // 3
+Phaser.Tweens.PENDING_RENDER // 4
+Phaser.Tweens.PLAYING_FORWARD // 5
+Phaser.Tweens.PLAYING_BACKWARD // 6
+Phaser.Tweens.HOLD_DELAY // 7
+Phaser.Tweens.REPEAT_DELAY // 8
+Phaser.Tweens.COMPLETE // 9
+Phaser.Tweens.PENDING_ADD // 20
+Phaser.Tweens.PAUSED // 21
+Phaser.Tweens.LOOP_DELAY // 22
+Phaser.Tweens.ACTIVE // 23
+Phaser.Tweens.COMPLETE_DELAY // 24
+Phaser.Tweens.PENDING_REMOVE // 25
+Phaser.Tweens.REMOVED // 26
+```
+
+### Events
+
+```js
+Phaser.Tweens.Events.TIMELINE_COMPLETE // complete
+Phaser.Tweens.Events.TIMELINE_LOOP // loop
+Phaser.Tweens.Events.TIMELINE_PAUSE // pause
+Phaser.Tweens.Events.TIMELINE_RESUME // resume
+Phaser.Tweens.Events.TIMELINE_START // start
+Phaser.Tweens.Events.TIMELINE_UPDATE // update
+Phaser.Tweens.Events.TWEEN_ACTIVE // active
+Phaser.Tweens.Events.TWEEN_COMPLETE // complete
+Phaser.Tweens.Events.TWEEN_LOOP // loop
+Phaser.Tweens.Events.TWEEN_REPEAT // repeat
+Phaser.Tweens.Events.TWEEN_START // start
+Phaser.Tweens.Events.TWEEN_UPDATE // update
+Phaser.Tweens.Events.TWEEN_YOYO // yoyo
+```
 
 ## Phaser.Utils
+
+> 暂无

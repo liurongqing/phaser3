@@ -1,5 +1,7 @@
 ## Phaser
 
+> 暂无
+
 ## Phaser.Actions
 
 ```js
@@ -63,11 +65,19 @@ Phaser.Actions.WrapInRectangle(items, rect [,padding]) // 在矩形内
 
 ## Phaser.BlendModes
 
+> 暂无
+
 ## Phaser.Cache
+
+> 暂无
 
 ## Phaser.Cameras
 
+> 暂无
+
 ## Phaser.Core
+
+> 暂无
 
 ## Phaser.Create
 
@@ -808,22 +818,154 @@ Phaser.Renderer.Snapshot.WebGL(sourceCanvas, config)
 
 ## Phaser.Scale
 
+> 暂无
+
 ## Phaser.ScaleModes
+
+> 暂无
 
 ## Phaser.Scenes
 
+> 暂无
+
 ## Phaser.Sound
 
+> 暂无
+
 ## Phaser.Structs
+
+```js
+Phaser.Structs.List()
+Phaser.Structs.Map()
+Phaser.Structs.ProcessQueue()
+Phaser.Structs.RTree()
+Phaser.Structs.Set()
+Phaser.Structs.Size()
+```
 
 ## Phaser.Textures
 
 ## Phaser.Tilemaps
 
+### Parsers
+
+```js
+Phaser.Tilemaps.Parsers.Parse(
+  name,
+  mapFormat,
+  data,
+  tileWidth,
+  tileHeight,
+  insertNull
+)
+Phaser.Tilemaps.Parsers.Parse2DArray(
+  name,
+  data,
+  tileWidth,
+  tileHeight,
+  insertNull
+)
+Phaser.Tilemaps.Parsers.ParseCSV(name, data, tileWidth, tileHeight, insertNull)
+```
+
 ## Phaser.Time
+
+> 暂无
 
 ## Phaser.Tweens
 
-## Phaser.Types
+> 暂无
+
+### Builders
+
+```js
+Phaser.Tweens.Builders.GetBoolean(source, key, defaultValue)
+Phaser.Tweens.Builders.GetEaseFunction(ease [, easeParams])
+Phaser.Tweens.Builders.GetNewValue(source, key, defaultValue)
+Phaser.Tweens.Builders.GetProps(config)
+Phaser.Tweens.Builders.GetTargets(config)
+Phaser.Tweens.Builders.GetTweens(config)
+Phaser.Tweens.Builders.GetValueOp(key, propertyValue)
+Phaser.Tweens.Builders.NumberTweenBuilder(parent, config, defaults)
+Phaser.Tweens.Builders.StaggerBuilder(value [, config])
+Phaser.Tweens.Builders.TimelineBuilder(manager, config)
+Phaser.Tweens.Builders.TweenBuilder(parent, config, defaults)
+```
 
 ## Phaser.Utils
+
+```js
+Phaser.Utils.NOOP()
+```
+
+### Array
+
+```js
+Phaser.Utils.Array.Add(array, item [, limit] [, callback] [, context])
+Phaser.Utils.Array.AddAt(array, item [, index] [, limit] [, callback] [, context])
+Phaser.Utils.Array.BringToTop(array, item)
+Phaser.Utils.Array.CountAllMatching(array, property, value [, startIndex] [, endIndex])
+Phaser.Utils.Array.Each(array, callback, context [, args])
+Phaser.Utils.Array.EachInRange(array, callback, context, startIndex, endIndex [, args])
+Phaser.Utils.Array.FindClosestInSorted(value, array [, key])
+Phaser.Utils.Array.GetAll(array [, property] [, value] [, startIndex] [, endIndex])
+Phaser.Utils.Array.GetFirst(array [, property] [, value] [, startIndex] [, endIndex])
+Phaser.Utils.Array.GetRandom(array [, startIndex] [, length])
+Phaser.Utils.Array.MoveDown(array, item)
+Phaser.Utils.Array.MoveTo(array, item, index)
+Phaser.Utils.Array.MoveUp(array, item)
+Phaser.Utils.Array.NumberArray(start, end [, prefix] [, suffix])
+Phaser.Utils.Array.NumberArrayStep( [start] [, end] [, step])
+Phaser.Utils.Array.QuickSelect(arr, k [, left] [, right] [, compare])
+Phaser.Utils.Array.Range(a, b [, options])
+Phaser.Utils.Array.Remove(array, item [, callback] [, context])
+Phaser.Utils.Array.RemoveAt(array, index [, callback] [, context])
+Phaser.Utils.Array.RemoveBetween(array, startIndex, endIndex [, callback] [, context])
+Phaser.Utils.Array.RemoveRandomElement(array [, start] [, length])
+Phaser.Utils.Array.Replace(array, oldChild, newChild)
+Phaser.Utils.Array.RotateLeft(array [, total])
+Phaser.Utils.Array.RotateRight(array [, total])
+Phaser.Utils.Array.SafeRange(array, startIndex, endIndex [, throwError])
+Phaser.Utils.Array.SendToBack(array, item)
+Phaser.Utils.Array.SetAll(array, property, value [, startIndex] [, endIndex])
+Phaser.Utils.Array.Shuffle(array)
+Phaser.Utils.Array.SpliceOne(array, index)
+Phaser.Utils.Array.StableSort(arr, comp)
+Phaser.Utils.Array.Swap(array, item1, item2)
+```
+
+### Base64
+
+```js
+Phaser.Utils.Base64.ArrayBufferToBase64(arrayBuffer [, mediaType])
+Phaser.Utils.Base64.Base64ToArrayBuffer(base64)
+```
+
+### Objects
+
+```js
+Phaser.Utils.Objects.Clone(obj)
+Phaser.Utils.Objects.Extend()
+Phaser.Utils.Objects.GetAdvancedValue(source, key, defaultValue)
+Phaser.Utils.Objects.GetFastValue(source, key [, defaultValue])
+Phaser.Utils.Objects.GetMinMaxValue(source, key, min, max, defaultValue)
+Phaser.Utils.Objects.GetValue(source, key, defaultValue)
+Phaser.Utils.Objects.HasAll(source, keys)
+Phaser.Utils.Objects.HasAny(source, keys)
+Phaser.Utils.Objects.HasValue(source, key)
+Phaser.Utils.Objects.IsPlainObject(obj)
+Phaser.Utils.Objects.Merge(obj1, obj2)
+Phaser.Utils.Objects.MergeRight(obj1, obj2)
+Phaser.Utils.Objects.Pick(object, keys)
+Phaser.Utils.Objects.SetValue(source, key, value)
+```
+
+### String
+
+```js
+Phaser.Utils.String.Format(string, values)
+Phaser.Utils.String.Pad(str [, len] [, pad] [, dir])
+Phaser.Utils.String.Reverse(string)
+Phaser.Utils.String.UppercaseFirst(str)
+Phaser.Utils.String.UUID()
+```
