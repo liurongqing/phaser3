@@ -766,7 +766,45 @@ Phaser.Math.RND.weightedPick(array) // 随机返回一个元素，利于前面�
 
 ## Phaser.Plugins
 
+```js
+Phaser.Plugins.PluginCache.destroyCorePlugins()
+Phaser.Plugins.PluginCache.destroyCustomPlugins()
+Phaser.Plugins.PluginCache.getCore(key)
+Phaser.Plugins.PluginCache.getCustom(key)
+Phaser.Plugins.PluginCache.getCustomClass(key)
+Phaser.Plugins.PluginCache.hasCore(key)
+Phaser.Plugins.PluginCache.hasCustom(key)
+Phaser.Plugins.PluginCache.register(key, plugin, mapping [,custom])
+Phaser.Plugins.PluginCache.registerCustom(key, plugin, mapping, data)
+Phaser.Plugins.PluginCache.remove(key)
+Phaser.Plugins.PluginCache.removeCustom(key)
+```
+
 ## Phaser.Renderer
+
+### Canvas
+
+```js
+Phaser.Renderer.Canvas.GetBlendModes()
+Phaser.Renderer.Canvas.SetTransform(renderer, ctx, src, camera [,parentMatrix])
+```
+
+### WebGL
+
+```js
+Phaser.Renderer.WebGL.Utils.getComponentCount(attributes, glContext)
+Phaser.Renderer.WebGL.Utils.getFloatsFromUintRGB(rgb)
+Phaser.Renderer.WebGL.Utils.getTintAppendFloatAlpha(rgb, a)
+Phaser.Renderer.WebGL.Utils.getTintAppendFloatAlphaAndSwap(rgb, a)
+Phaser.Renderer.WebGL.Utils.getTintFromFloats(r, g, b, a)
+```
+
+### Snapshot
+
+```js
+Phaser.Renderer.Snapshot.Canvas(sourceCanvas, config)
+Phaser.Renderer.Snapshot.WebGL(sourceCanvas, config)
+```
 
 ## Phaser.Scale
 

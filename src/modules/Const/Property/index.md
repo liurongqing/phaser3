@@ -477,13 +477,132 @@ Phaser.Math.MAX_SAFE_INTEGER // 最大安全整数
 
 ## Phaser.Plugins
 
+```js
+Phaser.Plugins.CoreScene
+Phaser.Plugins.DefaultScene
+Phaser.Plugins.Global
+```
+
 ## Phaser.Renderer
+
+> 暂无
 
 ## Phaser.Scale
 
+```js
+// CenterType
+Phaser.Scale.NO_CENTER // 0
+Phaser.Scale.CENTER_BOTH // 1
+Phaser.Scale.CENTER_HORIZONTALLY // 2
+Phaser.Scale.CENTER_VERTICALLY // 3
+
+// ScaleModeTpe
+Phaser.Scale.NONE // 0
+Phaser.Scale.WIDTH_CONTROLS_HEIGHT // 1
+Phaser.Scale.HEIGHT_CONTROLS_WIDTH // 2
+Phaser.Scale.FIT // 3
+Phaser.Scale.ENVELOP // 4
+Phaser.Scale.RESIZE // 5
+
+// OrientationType
+Phaser.Scale.LANDSCAPE // 'landscape-primary'
+Phaser.Scale.PORTRAIT // 'portrait-primary'
+
+// ZoomType
+Phaser.Scale.NO_ZOOM // 1
+Phaser.Scale.ZOOM_2X // 2
+Phaser.Scale.ZOOM_4X // 4
+Phaser.Scale.MAX_ZOOM // -1
+```
+
+### Center
+
+```js
+Phaser.Scale.Center.NO_CENTER // 0
+Phaser.Scale.Center.CENTER_BOTH // 1
+Phaser.Scale.Center.CENTER_HORIZONTALLY // 2
+Phaser.Scale.Center.CENTER_VERTICALLY // 3
+```
+
+### Events
+
+```js
+Phaser.Scale.Events.ENTER_FULLSCREEN // enterfullscreen
+Phaser.Scale.Events.FULLSCREEN_FAILED // fullscreenfailed
+Phaser.Scale.Events.FULLSCREEN_UNSUPPORTED // fullscreenunsupported
+Phaser.Scale.Events.LEAVE_FULLSCREEN // leavefullscreen
+Phaser.Scale.Events.ORIENTATION_CHANGE // orientationchange
+Phaser.Scale.Events.RESIZE // resize
+```
+
+### Orientation
+
+```js
+Phaser.Scale.Orientation.LANDSCAPE // 'landscape-primary'
+Phaser.Scale.Orientation.PORTRAIT // 'portrait-primary'
+```
+
+### ScaleModes
+
+```js
+Phaser.Scale.ScaleModes.NONE // 0
+Phaser.Scale.ScaleModes.WIDTH_CONTROLS_HEIGHT // 1
+Phaser.Scale.ScaleModes.HEIGHT_CONTROLS_WIDTH // 2
+Phaser.Scale.ScaleModes.FIT // 3
+Phaser.Scale.ScaleModes.ENVELOP // 4
+Phaser.Scale.ScaleModes.RESIZE // 5
+```
+
+### Zoom
+
+```js
+Phaser.Scale.Zoom.NO_ZOOM // 1
+Phaser.Scale.Zoom.ZOOM_2X // 2
+Phaser.Scale.Zoom.ZOOM_4X // 4
+Phaser.Scale.Zoom.MAX_ZOOM // -1
+```
+
 ## Phaser.ScaleModes
 
+```js
+Phaser.ScaleModes.DEFAULT // 0
+Phaser.ScaleModes.LINEAR // 0
+Phaser.ScaleModes.NEAREST // 1
+```
+
 ## Phaser.Scenes
+
+```js
+Phaser.Scenes.PENDING // 0
+Phaser.Scenes.INIT // 1
+Phaser.Scenes.START // 2
+Phaser.Scenes.LOADING // 3
+Phaser.Scenes.CREATING // 4
+Phaser.Scenes.RUNNING // 5
+Phaser.Scenes.PAUSED // 6
+Phaser.Scenes.SLEEPING // 7
+Phaser.Scenes.SHUTDOWN // 8
+Phaser.Scenes.DESTROYED // 9
+```
+
+### Events
+
+```js
+Phaser.Scenes.Events.BOOT // boot
+Phaser.Scenes.Events.CREATE // create
+Phaser.Scenes.Events.DESTROY // destroy
+Phaser.Scenes.Events.PAUSE // pause
+Phaser.Scenes.Events.BOOT // boot
+Phaser.Scenes.Events.BOOT // boot
+Phaser.Scenes.Events.BOOT // boot
+Phaser.Scenes.Events.BOOT // boot
+Phaser.Scenes.Events.BOOT // boot
+Phaser.Scenes.Events.BOOT // boot
+Phaser.Scenes.Events.BOOT // boot
+Phaser.Scenes.Events.BOOT // boot
+Phaser.Scenes.Events.BOOT // boot
+Phaser.Scenes.Events.BOOT // boot
+```
 
 ## Phaser.Sound
 
