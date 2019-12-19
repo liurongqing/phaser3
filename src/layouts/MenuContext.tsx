@@ -19,7 +19,7 @@ const MenuContext = ({ location }) => {
     return getItem(data)
   }, [data])
 
-  console.log('currentKeys', currentKeys)
+  // console.log('currentKeys', currentKeys)
 
   function getItem(data: any) {
     return data.map((v: any) => {

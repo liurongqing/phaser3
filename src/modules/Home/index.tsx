@@ -11,7 +11,7 @@ export default ({ history }) => {
     setData(routesData.filter(v => v.parentId === 0))
   }, [])
   function goto(row: any) {
-    let path = WEBPACK_PRODUCTION ? '/phaser3' : ''
+    let path: string
     const children = routesData.find(v => v.parentId === row.id)
     if (children) {
       path += children.path
