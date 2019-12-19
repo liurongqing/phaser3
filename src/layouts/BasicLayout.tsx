@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Layout, Icon } from 'antd'
+import { Layout, Icon, BackTop } from 'antd'
 
 import CRouter from '@/commons/component/CRouter'
 import MenuContext from './MenuContext'
@@ -37,6 +37,11 @@ export default ({ routes, location, history }) => {
           <MenuContext />
         </Sider>
         <Content className="phaser3-content markdown-body">
+          <BackTop
+            target={() =>
+              window.document.querySelector('.phaser3-content') as HTMLElement
+            }
+          />
           <CRouter routes={routes} />
         </Content>
         <Sider collapsed={collapsed} collapsedWidth={0}>

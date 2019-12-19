@@ -56,6 +56,7 @@ export const routesData = [
     parentId: 0,
     text: 'Home',
     path: '/home',
+    icon: 'home',
     component: Home
   },
   {

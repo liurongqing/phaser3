@@ -1,13 +1,23 @@
-## 学习进度
-
-边学边写
-
-## 已完成
-
-- [x] [Display](/phaser3/display)
-- [x] [Cache](/phaser3/cache)
-- [x] [Components Data](/phaser3/components/data)
-
 ## 进行中
 
-- [ ] [Depth Sorting](/phaser3/depthsorting)
+- [ ] [Animation](/phaser3/animation)
+- [ ] [Camera](/phaser3/camera)
+- [ ] [Events](/phaser3/events)
+- [ ] [GameObjects](/phaser3/gameobjects)
+- [ ] [Geom](/phaser3/Geom/ellipse)
+- [ ] [Input](/phaser3/input)
+- [ ] [Loader](/phaser3/loader)
+- [ ] [Path](/phaser3/path)
+- [ ] [Physics](/phaser3/physics)
+- [ ] [Plugins](/phaser3/plugins)
+- [ ] [Pools](/phaser3/pools)
+- [ ] [Scalemanager](/phaser3/scalemanager)
+- [ ] [Scenes](/phaser3/scenes)
+- [ ] [Snapshot](/phaser3/snapshot)
+- [ ] [Spine](/phaser3/spine)
+- [ ] [Textures](/phaser3/textures)
+- [ ] [Time](/phaser3/time)
+- [ ] [Timestep](/phaser3/timestep)
+- [ ] [Transform](/phaser3/transform)
+- [ ] [Tweens](/phaser3/tweens)
+- [ ] [Utils](/phaser3/Utils)
