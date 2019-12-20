@@ -7,19 +7,21 @@ import { routesData } from '@/router'
 const { SubMenu } = Menu
 const { useEffect, useState, useMemo } = React
 
+let globalOpenKeys: any
+
 const MenuContext = ({ location }) => {
   const [data, setData] = useState([])
-
+  const [, forceUpdate] = useState()
+  const pathname = location.pathname.match(/\/\w+/g)
+  let currentOpenKeys = globalOpenKeys || pathname
+  globalOpenKeys = null
   useEffect(() => {
     setData(tree({ data: routesData }))
   }, [])
 
-  const currentKeys = location.pathname.match(/\/\w+/g)
   const CMenu = useMemo(() => {
     return getItem(data)
   }, [data])
-
-  // console.log('currentKeys', currentKeys)
 
   function getItem(data: any) {
     return data.map((v: any) => {
@@ -44,16 +46,28 @@ const MenuContext = ({ location }) => {
     })
   }
 
+  function onOpenChange(openKeys: any) {
+    // console.log('openKeys', openKeys)
+    // 只有一个值的情况下
+    globalOpenKeys = [openKeys.pop()]
+    forceUpdate({})
+  }
+
   return (
-    <Menu
-      theme="light"
-      mode="inline"
-      defaultSelectedKeys={[currentKeys.join('')]}
-      defaultOpenKeys={currentKeys}
-      style={{ height: 'calc(100vh - 48px)', overflow: 'auto' }}
-    >
-      {CMenu}
-    </Menu>
+    <>
+      <Menu
+        theme="light"
+        mode="inline"
+        selectedKeys={[pathname.join('')]}
+        openKeys={currentOpenKeys}
+        onOpenChange={onOpenChange}
+        // defaultSelectedKeys={[currentKeys.join('')]}
+        // defaultOpenKeys={currentKeys}
+        style={{ height: 'calc(100vh - 48px)', overflow: 'auto' }}
+      >
+        {CMenu}
+      </Menu>
+    </>
   )
 }
 
