@@ -14,9 +14,9 @@ export default ({ history }) => {
     let path: string
     const children = routesData.find(v => v.parentId === row.id)
     if (children) {
-      path += children.path
+      path = children.path
     } else {
-      path += row.path
+      path = row.path
     }
     history.push(path)
   }
